@@ -18,6 +18,6 @@ export class PercorsoService {
 
   //funzioni di interazione col db
   getAllPercorsi() {
-    return this.http.get('http://localhost/abruzzo-tour/abruzoServer/getAllPercorsi.php');
+    return this.http.get('http://localhost/abruzzo-tour/abruzoServer/apiPercorso/getAllPercorsi.php');
   }
 }

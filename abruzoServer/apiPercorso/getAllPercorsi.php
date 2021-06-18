@@ -1,10 +1,8 @@
 <?php
 
-include "config.php";
+include "../config.php";
 $data = array();
-$id = $_GET['id'];
-
-$q = mysqli_query($con, "SELECT * FROM percorsi WHERE id = $id");
+$q = mysqli_query($con, "SELECT * FROM percorsi");
 
 while ($row = mysqli_fetch_object($q)){
     $data[] = $row;

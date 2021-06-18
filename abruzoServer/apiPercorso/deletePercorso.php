@@ -1,6 +1,6 @@
 <?php
 
-include "config.php";
+include "../config.php";
 $input = file_get_contents('php://input');
 $message = array();
 $id = $_GET['id'];
