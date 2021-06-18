@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Lista Percorsi</ion-title>
+    <!-- back button -->
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <!-- end back button -->
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item lines="insert" *ngFor="let percorso of percorsi">
+      <ion-label>
+        <h2>Nome: {{ percorso.nome }}</h2>
+        <h2>Difficoltà: {{ percorso.difficolta }}</h2>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
