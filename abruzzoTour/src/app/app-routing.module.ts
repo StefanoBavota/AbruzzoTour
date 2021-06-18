@@ -15,6 +15,15 @@ const routes: Routes = [
     path: 'lista-percorsi',
     loadChildren: () => import('./lista-percorsi/lista-percorsi.module').then( m => m.ListaPercorsiPageModule)
   },
+  {
+    path: 'info-percorso/:id',
+    loadChildren: () => import('./info-percorso/info-percorso.module').then( m => m.InfoPercorsoPageModule)
+  },  {
+    path: 'view-map',
+    loadChildren: () => import('./view-map/view-map.module').then( m => m.ViewMapPageModule)
+  },
+
+
 ];
 
 @NgModule({

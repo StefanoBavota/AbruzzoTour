@@ -12,8 +12,8 @@
 <ion-content>
   <ion-list>
     <ion-item lines="insert" *ngFor="let percorso of percorsi">
-      <ion-label>
-        <h2>Nome: {{ percorso.nome }}</h2>
+      <ion-label [routerLink]="['/info-percorso/',percorso.id]">
+        <h2>{{ percorso.nome }}</h2>
         <h2>Difficoltà: {{ percorso.difficolta }}</h2>
       </ion-label>
     </ion-item>
