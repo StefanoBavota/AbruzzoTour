@@ -1,0 +1,9 @@
+//elimina la barra laterale per lo scroll
+ion-content {
+  --offset-bottom: auto !important;
+  --overflow: hidden;
+  overflow: auto;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
