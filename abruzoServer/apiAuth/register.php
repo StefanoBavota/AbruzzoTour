@@ -18,11 +18,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($sql) {
         http_response_code(201);
         echo json_encode(array('message' => 'User created'));
-    } esle {
+    } else {
         http_response_code(500);
         echo json_encode(array('message' => 'Internal Server error'));
-    }else {
-        http_response_code(404);
     }
+ 
     
+}else {
+    http_response_code(404);
 }
