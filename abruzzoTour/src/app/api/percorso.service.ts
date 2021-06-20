@@ -22,6 +22,6 @@ export class PercorsoService {
   }
 
   getPercorsoById(id){
-    return this.http.get('http://localhost/abruzzo-tour/abruzoServer/getPercorsoById.php?id='+id);
+    return this.http.get('http://localhost/abruzzo-tour/abruzoServer/apiPercorso/getPercorsoById.php?id='+id);
   }
 }
