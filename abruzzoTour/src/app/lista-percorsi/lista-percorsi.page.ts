@@ -21,7 +21,6 @@ export class ListaPercorsiPage implements OnInit {
 
   getAllPercorsi() {
     this._percorsoService.getAllPercorsi().subscribe((res: any) => {
-      console.log("SUCCESS ===", res);
       this.percorsi = res;
     }, (error: any) => {
       console.log("ERROR ===", error);

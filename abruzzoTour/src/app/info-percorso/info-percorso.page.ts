@@ -15,6 +15,8 @@ export class InfoPercorsoPage implements OnInit {
   difficolta: any;
   info: any;
   image: any;
+  latitude: any;
+  longitude: any;
   //percorso: any;
 
   constructor(
@@ -38,12 +40,13 @@ export class InfoPercorsoPage implements OnInit {
     //await loading.present();
 
     this._percorsoService.getPercorsoById(id).subscribe((res: any) => {
-      console.log("SUCCESS", res);
       let percorso = res[0];
       this.nome = percorso.nome;
       this.difficolta = percorso.difficolta;
       this.info = percorso.info;
       this.image = percorso.image;
+      this.latitude = percorso.latitude;
+      this.longitude = percorso.longitude;
       //loading.dismiss();
     }, async (err: any) => {
       console.log("ERROR", err);
