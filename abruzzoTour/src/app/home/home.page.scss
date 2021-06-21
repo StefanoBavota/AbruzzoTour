@@ -18,17 +18,22 @@ ion-title {
   color: white;
 }
 
-//posizione immagini
-.mygrid {
-  margin-top: 30%;
-  margin-left: 7%;
-  margin-right: 5%;
-  
+//centrare immagini
+.Aligner {
+  background: #97F071;
+  display: grid;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-items: center;
 }
 
-//rotondità immagini
-.col {
-  padding: 9px;
+.text-center {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-items: center;
 }
 
 //caratteristiche immagine

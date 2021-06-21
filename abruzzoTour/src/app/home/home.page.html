@@ -8,16 +8,17 @@
 
 
 
-<ion-content padding>
+<div class="Aligner">
 
   <ion-grid class="mygrid">
+    
     <ion-row>
-
       <ion-col>
         <div>
             <ion-avatar>
               <img src="../../assets/icon/percorsiimg.jpeg" [routerLink]="['/lista-percorsi']" style="border-radius: 10%">
             </ion-avatar>
+            <div class="text-center">Percorsi</div>
         </div>
       </ion-col>
 
@@ -26,6 +27,7 @@
             <ion-avatar>
               <img src="../../assets/icon/tracciamentoimg.jpeg" [routerLink]="['']" style="border-radius: 10%">
             </ion-avatar>
+            <div class="text-center">Tracciamento</div>
         </div>
       </ion-col>
     </ion-row>
@@ -36,6 +38,7 @@
             <ion-avatar>
               <img src="../../assets/icon/impostazioniimg.jpeg" [routerLink]="['']" style="border-radius: 10%">
             </ion-avatar>
+            <div class="text-center">Impostazioni</div>
         </div>
       </ion-col>
 
@@ -44,10 +47,11 @@
             <ion-avatar>
               <img src="../../assets/icon/profiloimg.jpeg" [routerLink]="['']" style="border-radius: 10%">
             </ion-avatar>
+            <div class="text-center">Profilo</div>
         </div>
       </ion-col>
-      
     </ion-row>
+
   </ion-grid>
   
-</ion-content>
+</div>
