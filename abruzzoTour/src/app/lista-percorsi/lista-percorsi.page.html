@@ -1,24 +1,32 @@
 <ion-header>
-  <ion-toolbar class="myToolbar1">
+  <ion-toolbar>
     <!-- back button -->
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
     <!-- end back button -->
-  </ion-toolbar>
-
-  <ion-toolbar class="myToolbar2">
     <ion-title>Lista Percorsi</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-item lines="insert" *ngFor="let percorso of percorsi">
-      <ion-label [routerLink]="['/info-percorso/',percorso.id]">
+  <ion-list id="colore" style="margin-top: 1rem;" lines="full">
+    <ion-item side="end" color="#6aa84f" lines="insert" *ngFor="let percorso of percorsi" href>
+      <ion-label id="colore" [routerLink]="['/info-percorso/',percorso.id]">
         <h2>{{ percorso.nome }}</h2>
         <h2>Difficoltà: {{ percorso.difficolta }}</h2>
       </ion-label>
     </ion-item>
   </ion-list>
 </ion-content>
+
+<!--<ion-content>
+  <ion-list id="colore" style="margin-top: 1rem;">
+    <ion-item id="colore" lines="insert" *ngFor="let percorso of percorsi">
+      <ion-label id="colore" [routerLink]="['/info-percorso/',percorso.id]">
+        <h2>{{ percorso.nome }}</h2>
+        <h2>Difficoltà: {{ percorso.difficolta }}</h2>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>-->

@@ -1,12 +1,8 @@
 
 
-.myToolbar1 {
+ion-toolbar {
     --background: #3f632f;
     height: 70px;
-}
-
-.myToolbar2 {
-    --background: #6aa84f;
 }
 
 //colore background
@@ -14,5 +10,24 @@ ion-content {
     --background: #97F071;
 }
 
+#colore{
+    background-color: #6aa84f;
+}
+
+/*ion-list {
+    background-color: #23588d !important;
+    color: #ffffff;
+}
+
+ion-label {
+    background-color: #d1112b !important;
+    color: #ffffff;
+}
+
+ion-item {
+    padding:20px;
+    --ion-background-color: #bdc00c !important;
+    background: #bdc00c; 
+}*/
 
 
