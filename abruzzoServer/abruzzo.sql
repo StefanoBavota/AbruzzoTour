@@ -7,8 +7,8 @@
 -- Versione del server: 10.4.18-MariaDB
 -- Versione PHP: 7.3.27
 
-DROP DATABASE abruzzo;
-CREATE DATABASE IF EXISTS abruzzo;
+DROP DATABASE IF EXISTS abruzzo;
+CREATE DATABASE abruzzo;
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
