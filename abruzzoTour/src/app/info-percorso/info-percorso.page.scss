@@ -7,3 +7,26 @@ ion-content {
     display: none;
   }
 }
+
+//colore toolbar
+ion-toolbar {
+  --background: #3f632f;
+  height: 70px;
+}
+
+//colore card
+ion-card {
+  --background: #6aa84f;
+}
+
+//colore background
+ion-content {
+  background-color: #97F071 !important;
+}
+
+//colore titolo
+.testo {
+  color: white;
+}
+
+

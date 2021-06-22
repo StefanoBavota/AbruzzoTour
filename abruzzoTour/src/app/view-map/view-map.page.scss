@@ -1,0 +1,17 @@
+ion-content {
+  #map {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 150ms ease-in;
+    display: block;
+    &.show-map {
+      opacity: 1;
+    }
+  }
+}
+
+ion-toolbar {
+  --background: #3f632f;
+  height: 70px;
+}

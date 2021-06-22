@@ -1,14 +1,57 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
+    <ion-title class="ion-text-center">
       Abruzzo Tour
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-list lines="full">
-    <ion-button shape="round" color="primary" expand="full" [routerLink]="['/lista-percorsi']">Lista Percorsi</ion-button>
-    <ion-button shape="round" color="primary" expand="full">Profilo</ion-button>
-  </ion-list>
-</ion-content>
+
+
+<div class="Aligner">
+
+  <ion-grid class="mygrid">
+    
+    <ion-row>
+      <ion-col style="margin-right: 1rem;">
+        <div>
+            <ion-avatar>
+              <img src="../../assets/icon/percorsiimg.jpeg" [routerLink]="['/lista-percorsi']" style="border-radius: 10%">
+            </ion-avatar>
+            <div class="text-center">Percorsi</div>
+        </div>
+      </ion-col>
+
+      <ion-col> 
+        <div>
+            <ion-avatar>
+              <img src="../../assets/icon/tracciamentoimg.jpeg" [routerLink]="['']" style="border-radius: 10%">
+            </ion-avatar>
+            <div class="text-center">Tracciamento</div>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col style="margin-right: 1rem; margin-top: 0.5rem;">
+        <div>
+            <ion-avatar>
+              <img src="../../assets/icon/impostazioniimg.jpeg" [routerLink]="['']" style="border-radius: 10%">
+            </ion-avatar>
+            <div class="text-center">Impostazioni</div>
+        </div>
+      </ion-col>
+
+      <ion-col style="margin-top: 0.5rem;">
+        <div>
+            <ion-avatar>
+              <img src="../../assets/icon/profiloimg.jpeg" [routerLink]="['']" style="border-radius: 10%">
+            </ion-avatar>
+            <div class="text-center">Profilo</div>
+        </div>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+  
+</div>
