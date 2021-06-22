@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 declare var google;
 
@@ -33,7 +33,9 @@ export class ViewMapPage implements OnInit {
     })
   }
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  ngAfterViewInit() {
     this.loadMap();
   }
 
@@ -41,13 +43,13 @@ export class ViewMapPage implements OnInit {
     // create a new map by passing HTMLElement
     const mapEle: HTMLElement = document.getElementById('map');
     // create LatLng object
-    const myLatLng = {lat: this.latitude, lng: this.longitude};
+    const myLatLng = { lat: this.latitude, lng: this.longitude };
     // create map
     this.map = new google.maps.Map(mapEle, {
       center: myLatLng,
       zoom: 11
     });
-  
+
     google.maps.event.addListenerOnce(this.map, 'idle', () => {
       mapEle.classList.add('show-map');
       const marker = {
