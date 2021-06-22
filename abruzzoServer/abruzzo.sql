@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Giu 18, 2021 alle 19:30
+-- Creato il: Giu 22, 2021 alle 18:21
 -- Versione del server: 10.4.18-MariaDB
 -- Versione PHP: 7.3.27
 
@@ -42,9 +42,9 @@ CREATE TABLE `percorsi` (
 --
 
 INSERT INTO `percorsi` (`id`, `nome`, `difficolta`, `info`, `image`, `latitude`, `longitude`) VALUES
-(8, 'Cascata di San Giovanni', 4, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac elementum magna. Pellentesque mi libero, pharetra sit amet elit dictum, egestas suscipit metus. Donec vulputate posuere tortor, sed dignissim enim sagittis consectetur. Proin consectetur, libero et cursus dignissim, velit eros auctor purus, posuere tempor arcu orci nec velit. Vestibulum eget lorem eget urna ullamcorper maximus vitae sed tortor.', 'https://www.parcomajella.it/foto/grandi/cascata-san-giovanni-3.jpg', 0, 0),
-(14, 'Percorso 2', 3, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac elementum magna. Pellentesque mi libero, pharetra sit amet elit dictum, egestas suscipit metus. Donec vulputate posuere tortor, sed dignissim enim sagittis consectetur. Proin consectetur, libero et cursus dignissim, velit eros auctor purus, posuere tempor arcu orci nec velit. Vestibulum eget lorem eget urna ullamcorper maximus vitae sed tortor.', '', 0, 0),
-(15, 'Percorso 3', 5, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac elementum magna. Pellentesque mi libero, pharetra sit amet elit dictum, egestas suscipit metus. Donec vulputate posuere tortor, sed dignissim enim sagittis consectetur. Proin consectetur, libero et cursus dignissim, velit eros auctor purus, posuere tempor arcu orci nec velit. Vestibulum eget lorem eget urna ullamcorper maximus vitae sed tortor.', '', 0, 0);
+(8, 'Cascata di San Giovanni', 4, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac elementum magna. Pellentesque mi libero, pharetra sit amet elit dictum, egestas suscipit metus. Donec vulputate posuere tortor, sed dignissim enim sagittis consectetur. Proin consectetur, libero et cursus dignissim, velit eros auctor purus, posuere tempor arcu orci nec velit. Vestibulum eget lorem eget urna ullamcorper maximus vitae sed tortor.', 'https://www.parcomajella.it/foto/grandi/cascata-san-giovanni-3.jpg', 42.16529611416041, 14.151688792061758),
+(14, 'Valle dell\'orfento', 3, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac elementum magna. Pellentesque mi libero, pharetra sit amet elit dictum, egestas suscipit metus. Donec vulputate posuere tortor, sed dignissim enim sagittis consectetur. Proin consectetur, libero et cursus dignissim, velit eros auctor purus, posuere tempor arcu orci nec velit. Vestibulum eget lorem eget urna ullamcorper maximus vitae sed tortor.', 'https://www.parcomajella.it/foto/grandi/scalelle_6-2-2-3-1-1-1-1-3-1-2-1-1-2-1-1-2-1-2-1.jpg', 42.1603453945707, 14.010251469318495),
+(15, 'Lago San Domenico', 5, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac elementum magna. Pellentesque mi libero, pharetra sit amet elit dictum, egestas suscipit metus. Donec vulputate posuere tortor, sed dignissim enim sagittis consectetur. Proin consectetur, libero et cursus dignissim, velit eros auctor purus, posuere tempor arcu orci nec velit. Vestibulum eget lorem eget urna ullamcorper maximus vitae sed tortor.', 'https://www.visitareabruzzo.it/wp-content/uploads/2020/07/lago-di-san-domenico.jpg', 41.942852564580406, 13.829321429242826);
 
 --
 -- Indici per le tabelle scaricate
@@ -64,7 +64,7 @@ ALTER TABLE `percorsi`
 -- AUTO_INCREMENT per la tabella `percorsi`
 --
 ALTER TABLE `percorsi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
