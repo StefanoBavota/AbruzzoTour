@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthService } from '../api/auth.service';
 
 @Component({
@@ -11,13 +12,14 @@ export class LoginPage implements OnInit {
   password: any;
   isLogged: boolean;
 
-
   constructor(
+    private router: Router,
     public _apiService: AuthService
   ) { }
 
   ngOnInit() {
   }
+
   login() {
     let data = {
       email: this.email,
@@ -25,19 +27,14 @@ export class LoginPage implements OnInit {
     }
 
     this._apiService.login(data).subscribe((res: any) => {
-      console.log("SUCCESS ===", res);
-      alert('SUCCESS');
+      //console.log("SUCCESS ===", res);
       localStorage.setItem("login", JSON.stringify(res));
       this.isLogged = !!localStorage.getItem('login');
-      console.log(this.isLogged);
-      console.log("RETRIEVE ===", localStorage.getItem('login'));      
+      this.router.navigateByUrl('/home');
+      //console.log("RETRIEVE ===", localStorage.getItem('login'));      
     }, (error: any) => {
       console.log("ERROR ===", error);
       alert('ERROR');
-   
-      
     })
   }
-
-
 }

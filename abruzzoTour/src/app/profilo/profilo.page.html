@@ -2,19 +2,17 @@
   <ion-toolbar>
     <ion-title>profilo</ion-title>
     <ion-buttons slot="start">
-      <ion-back-button> </ion-back-button>
+      <ion-back-button [routerLink]="['/home']"></ion-back-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-list lines="full">
-    <ion-button *ngIf="!isLogged" shape="round" color="primary" expand="full"  [routerLink]="['/login']">Login</ion-button>
-    <ion-button *ngIf="isLogged" shape="round" color="primary" expand="full" (click)="logout()" [routerLink]="['/home']">Logout</ion-button>
-
-    
-
-    
+    <ion-button *ngIf="!isLogged" shape="round" color="primary" expand="full" [routerLink]="['/login']">Login
+    </ion-button>
+    <ion-button *ngIf="isLogged" shape="round" color="primary" expand="full" (click)="logout()">
+      Logout
+    </ion-button>
   </ion-list>
 </ion-content>
-

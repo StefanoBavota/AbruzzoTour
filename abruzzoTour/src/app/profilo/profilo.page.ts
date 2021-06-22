@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-profilo',
@@ -8,14 +9,23 @@ import { Component, OnInit } from '@angular/core';
 export class ProfiloPage implements OnInit {
   isLogged: boolean;
 
-  constructor() { }
+  constructor(
+    private router: Router,
+  ) { }
+
+  ionViewWillEnter() { 
+    window.onload = function () {
+      window.location.reload();
+    }
+  }
 
   ngOnInit() {
-  }
-  logout() {
-    localStorage.clear();
     this.isLogged = !!localStorage.getItem('login');
   }
 
-
+  logout() {
+    localStorage.clear();
+    this.isLogged = !!localStorage.getItem('login');
+    this.router.navigateByUrl('/login');
+  }
 }
