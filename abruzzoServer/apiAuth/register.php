@@ -1,29 +1,29 @@
 <?php
-include_once '../config.php';
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $data = json_decode(file_get_contents("php://input"));
+include "../config.php";
 
-    $fname = $data->firstname;
-    $lname = $data->lastname;
-    $uname = $data->username;
-    $pass = $data->password;
+$input = file_get_contents('php://input');
+$data = json_decode($input, true);
+$message = array();
+$nome = $data['nome'];
+$cognome = $data['cognome'];
+$email = $data['email'];
+$password = $data['password'];
 
-    // hash password
-    $hashed = password_hash($pass, PASSWORD_DEFAULT);
 
-    //U can do validation like unique username etc....
 
-    $sql = $conn->query("INSERT INTO users (firstname, lastname, username, password) VALUES ('$fname', '$lname', '$uname', '$hashed')");
-    if ($sql) {
-        http_response_code(201);
-        echo json_encode(array('message' => 'User created'));
-    } else {
-        http_response_code(500);
-        echo json_encode(array('message' => 'Internal Server error'));
-    }
- 
+
+
+$q = mysqli_query($con, "INSERT INTO utenti (nome, cognome, email, password) VALUES ('$nome', '$cognome', '$email', '$password') ");
+
+if($q){
+    http_response_code(201);
+    $message['status'] = "Success";
+} else {
+    http_response_code(422);
+    $message['status'] = "Error";
     
-}else {
-    http_response_code(404);
 }
+
+echo json_encode($message);
+echo mysqli_error($con);

@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Registrati</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button [routerLink]="['/home']"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content calss="ion-padding">
+  <form>
+    <ion-list>
+    <ion-item>
+      <ion-label position="floating"> Nome </ion-label>
+      <ion-input required type="text" [(ngModel)]= "nome" name="nome"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating"> Cognome </ion-label>
+      <ion-input required type="text" [(ngModel)]= "cognome" name="cognome"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating"> Email </ion-label>
+      <ion-input required type="text" [(ngModel)]= "email" name="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating"> Password </ion-label>
+      <ion-input required type="password" [(ngModel)]= "password" name="password"></ion-input>
+    </ion-item>
+    <ion-button tipe="submit" expand="block" shape="round" (click)="register()"> Registrati!</ion-button>
+  </ion-list>
+  </form>
+
+</ion-content>
