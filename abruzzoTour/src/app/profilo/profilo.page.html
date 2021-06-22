@@ -9,6 +9,18 @@
 
 <ion-content [fullscreen]="true">
   <ion-list lines="full">
+    <ion-button *ngIf="isLogged"  shape="round" color="primary" expand="full">
+      Preferiti
+    </ion-button>
+
+    <ion-button *ngIf="isLogged"  shape="round" color="primary" expand="full">
+      Recensioni
+    </ion-button>
+
+    <ion-button *ngIf="isLogged"  shape="round" color="primary" expand="full">
+      Percorsi Personali
+    </ion-button>
+
     <ion-button *ngIf="!isLogged" shape="round" color="primary" expand="full" [routerLink]="['/login']">Login
     </ion-button>
     <ion-button *ngIf="isLogged" shape="round" color="primary" expand="full" (click)="logout()">
