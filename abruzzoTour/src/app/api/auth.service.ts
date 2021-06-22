@@ -17,4 +17,15 @@ export class AuthService {
   }
 
   //funzioni di interazione col db
+  getUserById(id){
+    return this.http.get('http://localhost/abruzzo-tour/abruzzoServer/apiAuth/getUserById.php?id='+id);
+  }
+
+  login(data) {
+    return this.http.post('http://localhost/abruzzo-tour/abruzzoServer/apiAuth/login.php', data);
+  }
+
+  register(data) {
+    return this.http.post('http://localhost/abruzzo-tour/abruzzoServer/apiAuth/register.php', data);
+  }
 }

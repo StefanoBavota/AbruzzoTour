@@ -23,6 +23,18 @@ const routes: Routes = [
     path: 'view-map/:id/:latitude/:longitude',
     loadChildren: () => import('./view-map/view-map.module').then( m => m.ViewMapPageModule)
   },
+  {
+    path: 'profilo',
+    loadChildren: () => import('./profilo/profilo.module').then( m => m.ProfiloPageModule)
+  },
+  {
+    path: 'register',
+    loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
 
 
 ];
