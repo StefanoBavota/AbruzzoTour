@@ -10,7 +10,7 @@ $cognome = $data['cognome'];
 $email = $data['email'];
 $password = $data['password'];
 
-$q = mysqli_query($con, "INSERT INTO utenti (nome, cognome, email, password) VALUES ('$nome', '$cognome', '$email', '$password') ");
+$q = mysqli_query($con, "INSERT INTO utenti (nome, cognome, email, password, is_admin) VALUES ('$nome', '$cognome', '$email', '$password', false) ");
 
 if($q){
     http_response_code(201);
