@@ -1,30 +1,24 @@
 <ion-app>
-  <ion-split-pane contentId="main">
+  <ion-menu side="end" menuId="main-menu" contentId="main">
+    <ion-content>
+      <div class="menu-header-bg"></div>
+      <div class="header-content">
+        <img src="../../assets/icon/logoimg.jpg" alt="">
+        <ion-label>
+          <h2>AbruzzoTour</h2>
+        </ion-label>
+      </div>
 
-    <!-- our side menu -->
+      <ion-menu-toggle auto-hide="false">
+        <ion-item [routerLink]="['/home']" ion-menu-toggle auto-hide="false">Home</ion-item>
+        <ion-item [routerLink]="['/lista-percorsi']">Lista Percorsi</ion-item>
+        <ion-item [routerLink]="['/profilo']">Profilo</ion-item>
+        <ion-item *ngIf="isAdmin == 1" [routerLink]="['/admin']">Admin</ion-item>
+        <ion-item *ngIf="isLogged" [routerLink]="['/login']" (click)="logout()">Logout</ion-item>
+        <ion-item *ngIf="!isLogged" [routerLink]="['/login']">Login</ion-item>
+      </ion-menu-toggle>
 
-    <ion-menu side="end" menuId="first" contentId="main">
-      <ion-header>
-        <ion-toolbar color="primary">
-          <ion-title>Menu</ion-title>
-        </ion-toolbar>
-      </ion-header>
-      <ion-content>
-        <ion-list>
-          <ion-menu-toggle auto-hide="false">
-            <ion-item [routerLink]="['/home']" ion-menu-toggle auto-hide="false">Home</ion-item>
-            <ion-item [routerLink]="['/lista-percorsi']">Lista Percorsi</ion-item>
-            <ion-item [routerLink]="['/profilo']">Profilo</ion-item>
-            <ion-item *ngIf="isAdmin == 1" [routerLink]="['/admin']">Admin</ion-item>
-            <ion-item *ngIf="isLogged" (click)="logout()">Logout</ion-item>
-            <ion-item *ngIf="!isLogged" [routerLink]="['/login']">Login</ion-item>
-          </ion-menu-toggle>
-        </ion-list>
-      </ion-content>
-    </ion-menu>
-
-    <!-- the main content -->
-    <ion-router-outlet id="main"></ion-router-outlet>
-
-  </ion-split-pane>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="main"></ion-router-outlet>
 </ion-app>

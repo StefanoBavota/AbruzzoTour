@@ -4,27 +4,34 @@
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-list lines="full">
-    <ion-item>
-      <ion-label position="floating"> Nome </ion-label>
+  <ion-list id="colore" style="margin-top: 2rem;">
+    <div id="header">
+      <img src="../../assets/icon/logoimg.jpg">
+    </div>
+  
+    <ion-item color="#6aa84f">
+      <ion-label id="colore" position="floating"> Nome </ion-label>
       <ion-input required type="text" [(ngModel)]="nome" required></ion-input>
     </ion-item>
-    <ion-item>
+    <ion-item color="#6aa84f">
       <ion-label position="floating"> Cognome </ion-label>
       <ion-input required type="text" [(ngModel)]="cognome" required></ion-input>
     </ion-item>
-    <ion-item>
+    <ion-item color="#6aa84f">
       <ion-label position="floating"> Email </ion-label>
       <ion-input required type="text" [(ngModel)]="email" required></ion-input>
     </ion-item>
-    <ion-item>
+    <ion-item color="#6aa84f">
       <ion-label position="floating"> Password </ion-label>
       <ion-input required type="password" [(ngModel)]="password" required></ion-input>
     </ion-item>
-    <ion-button tipe="button" color="primary" shape="full" expand="block" (click)="register()"> Registrati</ion-button>
+    <ion-button style="--background:#3f632f" tipe="button" shape="round" expand="block" (click)="register()"> Registrati</ion-button>
   </ion-list>
 </ion-content>

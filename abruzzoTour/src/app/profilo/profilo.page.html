@@ -3,13 +3,15 @@
     <ion-title>profilo</ion-title>
     <ion-buttons slot="start">
       <ion-back-button [routerLink]="['/home']"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-list lines="full">
+  <ion-list lines="full" style="margin-top: 3rem;">
     <ion-button *ngIf="isLogged" shape="round" color="primary" expand="full"
       [routerLink]="['/lista-preferiti/',id_utente]">
       Preferiti
@@ -23,9 +25,6 @@
       Percorsi Personali
     </ion-button>
 
-    <ion-button *ngIf="!isLogged" shape="round" color="primary" expand="full" [routerLink]="['/login']">
-      Login
-    </ion-button>
     <ion-button *ngIf="isLogged" shape="round" color="primary" expand="full" (click)="logout()">
       Logout
     </ion-button>
