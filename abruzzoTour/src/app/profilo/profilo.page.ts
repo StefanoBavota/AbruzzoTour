@@ -34,6 +34,7 @@ export class ProfiloPage implements OnInit {
   logout() {
     localStorage.clear();
     this.isLogged = !!localStorage.getItem('login');
-    this.router.navigateByUrl('/login');
+    //this.router.navigateByUrl('/login');
+    window.location.href = '/login';
   }
 }
