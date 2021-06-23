@@ -34,7 +34,15 @@ const routes: Routes = [
   {
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },  {
+    path: 'recensioni',
+    loadChildren: () => import('./recensioni/recensioni.module').then( m => m.RecensioniPageModule)
   },
+  {
+    path: 'add-recensioni',
+    loadChildren: () => import('./add-recensioni/add-recensioni.module').then( m => m.AddRecensioniPageModule)
+  },
+
 
 
 ];
