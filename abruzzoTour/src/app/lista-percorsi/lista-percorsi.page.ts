@@ -13,7 +13,6 @@ export class ListaPercorsiPage implements OnInit {
   isLogged: boolean;
   userInfo: any;
   id_utente: any;
-  id_user: any;
 
   constructor(
     private alertController: AlertController,
@@ -26,7 +25,6 @@ export class ListaPercorsiPage implements OnInit {
     this.isLogged = !!localStorage.getItem('login');
     if (this.isLogged) {
       this.userInfo = JSON.parse(localStorage.getItem('login'))
-      this.id_user = this.userInfo.id;
     }
   }
 
