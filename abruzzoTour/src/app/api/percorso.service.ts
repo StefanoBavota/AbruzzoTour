@@ -24,4 +24,16 @@ export class PercorsoService {
   getPercorsoById(id){
     return this.http.get('http://localhost/abruzzo-tour/abruzzoServer/apiPercorso/getPercorsoById.php?id='+id);
   }
+
+  addToPreferiti(id, data){
+    return this.http.post('http://localhost/abruzzo-tour/abruzzoServer/apiPercorso/addToPreferiti.php?id='+id, data);
+  }
+
+  getPreferiti(id){
+    return this.http.get('http://localhost/abruzzo-tour/abruzzoServer/apiPercorso/getPreferitiByUserId.php?id='+id);
+  }
+
+  deletePreferito(id){
+    return this.http.delete('http://localhost/abruzzo-tour/abruzzoServer/apiPercorso/deletePreferito.php?id='+id);
+  }
 }

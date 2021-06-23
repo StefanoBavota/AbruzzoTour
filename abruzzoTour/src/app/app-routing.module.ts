@@ -42,6 +42,21 @@ const routes: Routes = [
     path: 'add-recensioni',
     loadChildren: () => import('./add-recensioni/add-recensioni.module').then( m => m.AddRecensioniPageModule)
   },
+<<<<<<< HEAD
+=======
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'lista-preferiti/:id',
+    loadChildren: () => import('./lista-preferiti/lista-preferiti.module').then( m => m.ListaPreferitiPageModule)
+  },
+
+
+
+];
+>>>>>>> c4cc15af543ba08b3456568538efdd8b73309b97
 
 
 

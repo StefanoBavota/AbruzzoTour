@@ -1,16 +1,11 @@
 <?php
 
 include "../config.php";
-
 $input = file_get_contents('php://input');
-$data = json_decode($input, true);
 $message = array();
-$nome = $data['nome'];
-$cognome = $data['cognome'];
-$email = $data['email'];
-$password = $data['password'];
+$id = $_GET['id'];
 
-$q = mysqli_query($con, "INSERT INTO utenti (nome, cognome, email, password) VALUES ('$nome', '$cognome', '$email', '$password') ");
+$q = mysqli_query($con, "DELETE FROM preferiti WHERE id_preferiti = $id");
 
 if($q){
     http_response_code(201);
@@ -18,7 +13,6 @@ if($q){
 } else {
     http_response_code(422);
     $message['status'] = "Error";
-    
 }
 
 echo json_encode($message);

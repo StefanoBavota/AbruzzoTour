@@ -11,11 +11,15 @@
 
 <ion-content>
   <ion-list id="colore" style="margin-top: 1rem;" lines="full">
-    <ion-item side="end" color="#6aa84f" lines="insert" *ngFor="let percorso of percorsi" href>
+    <ion-item side="end" color="#6aa84f" lines="insert" *ngFor="let percorso of percorsi">
       <ion-label id="colore" [routerLink]="['/info-percorso/',percorso.id]">
         <h2>{{ percorso.nome }}</h2>
         <h2>Difficoltà: {{ percorso.difficolta }}</h2>
       </ion-label>
+
+      <div class="item-note" *ngIf="isLogged">
+        <ion-icon name="heart-outline" style="zoom: 2.0;" (click)="addToPreferiti(percorso.id)"></ion-icon>
+      </div>
     </ion-item>
   </ion-list>
 </ion-content>
