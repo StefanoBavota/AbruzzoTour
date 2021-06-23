@@ -8,20 +8,20 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-list lines="full">
-    <ion-item>
-      <ion-label position="floating"> Nome </ion-label>
+  <ion-list id="colore" lines="full">
+    <ion-item color="#6aa84f">
+      <ion-label id="colore" position="floating"> Nome </ion-label>
       <ion-input required type="text" [(ngModel)]="nome" required></ion-input>
     </ion-item>
-    <ion-item>
+    <ion-item color="#6aa84f">
       <ion-label position="floating"> Cognome </ion-label>
       <ion-input required type="text" [(ngModel)]="cognome" required></ion-input>
     </ion-item>
-    <ion-item>
+    <ion-item color="#6aa84f">
       <ion-label position="floating"> Email </ion-label>
       <ion-input required type="text" [(ngModel)]="email" required></ion-input>
     </ion-item>
-    <ion-item>
+    <ion-item color="#6aa84f">
       <ion-label position="floating"> Password </ion-label>
       <ion-input required type="password" [(ngModel)]="password" required></ion-input>
     </ion-item>

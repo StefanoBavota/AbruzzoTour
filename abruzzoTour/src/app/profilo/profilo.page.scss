@@ -1,0 +1,18 @@
+
+ion-toolbar {
+    --background: #3f632f;
+}
+
+//colore background
+ion-content {
+    --background: #97F071;
+}
+
+//colore e centrare pulsante
+.Aligner {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-items: center;
+}
