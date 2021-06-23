@@ -1,3 +1,30 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-split-pane contentId="main">
+
+    <!-- our side menu -->
+
+    <ion-menu side="end" menuId="first" contentId="main">
+      <ion-header>
+        <ion-toolbar color="primary">
+          <ion-title>Menu</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-list>
+          <ion-menu-toggle auto-hide="false">
+            <ion-item [routerLink]="['/home']" ion-menu-toggle auto-hide="false">Home</ion-item>
+            <ion-item [routerLink]="['/lista-percorsi']">Lista Percorsi</ion-item>
+            <ion-item [routerLink]="['/profilo']">Profilo</ion-item>
+            <ion-item *ngIf="isAdmin == 1" [routerLink]="['/admin']">Admin</ion-item>
+            <ion-item *ngIf="isLogged" (click)="logout()">Logout</ion-item>
+            <ion-item *ngIf="!isLogged" [routerLink]="['/login']">Login</ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+
+    <!-- the main content -->
+    <ion-router-outlet id="main"></ion-router-outlet>
+
+  </ion-split-pane>
 </ion-app>

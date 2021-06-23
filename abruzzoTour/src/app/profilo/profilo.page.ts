@@ -10,6 +10,7 @@ export class ProfiloPage implements OnInit {
   isLogged: boolean;
   userInfo: any;
   id_utente: any;
+  isAdmin: boolean;
 
   constructor(
     private router: Router,
@@ -26,6 +27,7 @@ export class ProfiloPage implements OnInit {
     if (this.isLogged) {
       this.userInfo = JSON.parse(localStorage.getItem('login'))
       this.id_utente = this.userInfo.id;
+      this.isAdmin = this.userInfo.is_admin;
     }
   }
 

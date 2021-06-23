@@ -38,7 +38,11 @@ const routes: Routes = [
   {
     path: 'lista-preferiti/:id',
     loadChildren: () => import('./lista-preferiti/lista-preferiti.module').then( m => m.ListaPreferitiPageModule)
+  },  {
+    path: 'admin',
+    loadChildren: () => import('./admin/admin.module').then( m => m.AdminPageModule)
   },
+
 
 
 

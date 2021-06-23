@@ -16,7 +16,8 @@ if ($sql->num_rows > 0) {
         'id' => $user['id'],
         'nome' => $user['nome'],
         'cognome' => $user['cognome'],
-        'email' => $user['email']
+        'email' => $user['email'],
+        'is_admin' => $user['is_admin']
     );
 
  echo json_encode($payload);

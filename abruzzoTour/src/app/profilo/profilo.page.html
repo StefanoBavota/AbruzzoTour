@@ -3,28 +3,34 @@
     <ion-title>profilo</ion-title>
     <ion-buttons slot="start">
       <ion-back-button [routerLink]="['/home']"></ion-back-button>
+      <ion-menu-button></ion-menu-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-list lines="full">
-    <ion-button *ngIf="isLogged"  shape="round" color="primary" expand="full" [routerLink]="['/lista-preferiti/',id_utente]">
+    <ion-button *ngIf="isLogged" shape="round" color="primary" expand="full"
+      [routerLink]="['/lista-preferiti/',id_utente]">
       Preferiti
     </ion-button>
 
-    <ion-button *ngIf="isLogged"  shape="round" color="primary" expand="full">
+    <ion-button *ngIf="isLogged" shape="round" color="primary" expand="full">
       Recensioni
     </ion-button>
 
-    <ion-button *ngIf="isLogged"  shape="round" color="primary" expand="full">
+    <ion-button *ngIf="isLogged" shape="round" color="primary" expand="full">
       Percorsi Personali
     </ion-button>
 
-    <ion-button *ngIf="!isLogged" shape="round" color="primary" expand="full" [routerLink]="['/login']">Login
+    <ion-button *ngIf="!isLogged" shape="round" color="primary" expand="full" [routerLink]="['/login']">
+      Login
     </ion-button>
     <ion-button *ngIf="isLogged" shape="round" color="primary" expand="full" (click)="logout()">
       Logout
+    </ion-button>
+    <ion-button *ngIf="isAdmin == 1" shape="round" color="primary" expand="full" [routerLink]="['/admin']">
+      Admin
     </ion-button>
   </ion-list>
 </ion-content>
