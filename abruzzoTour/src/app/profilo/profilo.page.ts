@@ -8,10 +8,12 @@ import { Router } from '@angular/router';
 })
 export class ProfiloPage implements OnInit {
   isLogged: boolean;
+  userInfo: any;
+  id_utente: any;
 
   constructor(
     private router: Router,
-  ) { }
+  ) {}
 
   ionViewWillEnter() { 
     window.onload = function () {
@@ -21,6 +23,10 @@ export class ProfiloPage implements OnInit {
 
   ngOnInit() {
     this.isLogged = !!localStorage.getItem('login');
+    if (this.isLogged) {
+      this.userInfo = JSON.parse(localStorage.getItem('login'))
+      this.id_utente = this.userInfo.id;
+    }
   }
 
   logout() {
