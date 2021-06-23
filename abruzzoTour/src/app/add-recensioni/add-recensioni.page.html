@@ -22,5 +22,5 @@
     <ion-label position="floating">Valutazione</ion-label>
     <ion-input [(ngModel)]="valutazione" type="double"></ion-input>
   </ion-item>
-  <ion-button type="button" (click)="addRecensione()" color="primary" shape="round" expand="block" >Aggiungi</ion-button>
+  <ion-button type="button" (click)="addRecensione()" color="primary" shape="round" expand="block" [routerLink]="['/lista-percorsi']" >Aggiungi</ion-button>
 </ion-content>

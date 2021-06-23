@@ -44,6 +44,19 @@ const routes: Routes = [
     loadChildren: () => import('./admin/admin.module').then( m => m.AdminPageModule)
   },
 
+  {
+    path: 'recensioni',
+    loadChildren: () => import('./recensioni/recensioni.module').then( m => m.RecensioniPageModule)
+  },
+  {
+    path: 'add-recensioni',
+    loadChildren: () => import('./add-recensioni/add-recensioni.module').then( m => m.AddRecensioniPageModule)
+  },  {
+    path: 'info-recensione',
+    loadChildren: () => import('./info-recensione/info-recensione.module').then( m => m.InfoRecensionePageModule)
+  },
+
+
 
 
 

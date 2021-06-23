@@ -29,8 +29,6 @@ export class AuthService {
     return this.http.post('http://localhost/abruzzo-tour/abruzzoServer/apiAuth/register.php', data);
   }
 
-  getRecensioni() {
-    return this.http.get('http://localhost/server-abruzzo/apiAuth/getallrec.php');
-  }
+
 
 }

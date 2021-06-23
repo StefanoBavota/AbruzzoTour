@@ -21,4 +21,12 @@ export class RecensioneService {
   addRecensione(data) {
     return this.http.post('http://localhost/abruzzo-tour/abruzzoServer/apiAuth/create.php', data);
   }
+
+  getRecensioni(id){
+    return this.http.get('http://localhost/abruzzo-tour/abruzzoServer/apiAuth/getRecensioneById.php?id='+id);
+  }
+
+  getRecensioneByRecId(id){
+    return this.http.get('http://localhost/abruzzo-tour/abruzzoServer/apiAuth/getRecensioneById.php?id='+id);
+  }
 }

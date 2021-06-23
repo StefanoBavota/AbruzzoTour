@@ -26,25 +26,25 @@ export class AddRecensioniPage implements OnInit {
   }
 
   addRecensione() {
-    // testare: console.log(this.nome, this.difficolta);
-    let data = {
-      titolo: this.titolo,
-      descrizione: this.descrizione,
-      valutazione: this.valutazione,
-      id_utente: this.userInfo.id,
+    if (this.titolo && this.descrizione && this.valutazione){
+      // testare: console.log(this.nome, this.difficolta);
+      let data = {
+        titolo: this.titolo,
+        descrizione: this.descrizione,
+        valutazione: this.valutazione,
+        id_utente: this.userInfo.id,
+      }
+
+      this._apiService.addRecensione(data).subscribe((res: any) => {
+        console.log("SUCCESS ===", res);
+        this.titolo = '';
+        this.descrizione = '';
+        this.valutazione = '';
+      }, (error: any) => {
+        console.log("ERROR ===", error);
+      
+      })
     }
-
-    this._apiService.addRecensione(data).subscribe((res: any) => {
-      console.log("SUCCESS ===", res);
-      this.titolo = '';
-      this.descrizione = '';
-      this.valutazione = '';
-      alert('SUCCESS');
-
-    }, (error: any) => {
-      console.log("ERROR ===", error);
-      alert('ERROR');
-    })
   }
   
 

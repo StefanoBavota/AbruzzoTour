@@ -1,14 +1,23 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Recensioni</ion-title>
-        <!-- back button -->
-        <ion-buttons slot="start">
-          <ion-back-button></ion-back-button>
-        </ion-buttons>
-        <!-- end back button -->
+    <ion-title>recensioni</ion-title>
+    <!-- back button -->
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <!-- end back button -->
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-button type="button"  color="primary" shape="round" expand="block" [routerLink]="['/add-recensioni']">Aggiungi recensione</ion-button>
+  <ion-list id="colore" style="margin-top: 1rem;" lines="full">
+    <ion-item side="end" color="#6aa84f" lines="insert" *ngFor="let recensione of recensioni">
+      <ion-label id="colore" [routerLink]="['/info-recensione/',recensione.id]">
+        <h2>{{ recensione.titolo }}</h2>
+      </ion-label>
+
+      
+    </ion-item>
+  </ion-list>
 </ion-content>
