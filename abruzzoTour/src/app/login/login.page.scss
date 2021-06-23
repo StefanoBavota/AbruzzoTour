@@ -14,7 +14,7 @@ ion-toolbar {
 }*/
 
 ion-content {
-    background-color: #6aa84f;
+    --background: #6aa84f !important;
 
     #header {
         display: flex;
