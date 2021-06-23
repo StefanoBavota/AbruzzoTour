@@ -1,23 +1,26 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>recensioni</ion-title>
-    <!-- back button -->
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <!-- end back button -->
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-list id="colore" style="margin-top: 1rem;" lines="full">
     <ion-item side="end" color="#6aa84f" lines="insert" *ngFor="let recensione of recensioni">
-      <ion-label id="colore" [routerLink]="['/info-recensione/',recensione.id]">
+      <ion-label id="colore">
         <h2>{{ recensione.titolo }}</h2>
       </ion-label>
 
-      
+      <div class="item-note">
+        <ion-icon name="create-outline" style="zoom: 2.0;" [routerLink]="['/info-recensione/',recensione.id]"></ion-icon>
+        <ion-icon name="trash-outline" style="zoom: 2.0;" (click)="deleteRecensione(recensione.id)"></ion-icon>
+      </div>
     </ion-item>
   </ion-list>
 </ion-content>

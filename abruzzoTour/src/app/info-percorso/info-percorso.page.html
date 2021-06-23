@@ -20,10 +20,22 @@
     <ion-card-content class="testo">{{ info }}</ion-card-content>
   </ion-card>
 
+  <ion-list id="colore" style="margin-top: 1rem;" lines="full">
+    <ion-item side="end" color="#6aa84f" lines="insert" *ngFor="let recensione of recensioni">
+      <ion-label id="colore">
+        <h1>{{ nomeUtente }}</h1>
+        <h2>{{ recensione.titolo }}</h2>
+        <h2>{{ recensione.descrizione }}</h2>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
   <ion-row>
     <ion-col class="ion-text-center">
-      <ion-button style="--background:#3f632f" shape="round" [routerLink]="['/view-map',id,latitude,longitude]" class="center">Mappa</ion-button>
-      <ion-button style="--background:#3f632f" shape="round" [routerLink]="['/add-recensioni']" class="center">Recensisci</ion-button>
+      <ion-button style="--background:#3f632f" shape="round" [routerLink]="['/view-map',id,latitude,longitude]"
+        class="center">Mappa</ion-button>
+      <ion-button style="--background:#3f632f" shape="round" [routerLink]="['/add-recensioni',id]" class="center">
+        Recensisci</ion-button>
     </ion-col>
   </ion-row>
 </ion-content>

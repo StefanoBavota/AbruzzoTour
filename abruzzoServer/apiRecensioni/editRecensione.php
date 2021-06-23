@@ -6,14 +6,13 @@ $data = json_decode($input, true);
 $message = array();
 $titolo = $data['titolo'];
 $descrizione = $data['descrizione'];
-$valutazione = $data['valutazione'];
 $id_utente = $data['id_utente'];
+$id_percorso = $data['id_percorso'];
+$id = $_GET['id'];
 
+$q = mysqli_query($con, "UPDATE recensioni SET titolo = '$titolo', descrizione = '$descrizione', id_utente = '$id_utente', id_percorso = '$id_percorso' WHERE id = '$id'");
 
-$q = mysqli_query($con, "INSERT INTO recensioni (titolo, descrizione, valutazione, id_utente) VALUES ('$titolo', '$descrizione','$valutazione', '$id_utente') ");
-
-if($q){
-    http_response_code(201);
+if ($q) {
     $message['status'] = "Success";
 } else {
     http_response_code(422);

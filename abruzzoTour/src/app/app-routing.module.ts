@@ -45,14 +45,15 @@ const routes: Routes = [
   },
 
   {
-    path: 'recensioni',
+    path: 'recensioni/:id',
     loadChildren: () => import('./recensioni/recensioni.module').then( m => m.RecensioniPageModule)
   },
   {
-    path: 'add-recensioni',
+    path: 'add-recensioni/:id',
     loadChildren: () => import('./add-recensioni/add-recensioni.module').then( m => m.AddRecensioniPageModule)
-  },  {
-    path: 'info-recensione',
+  },
+  {
+    path: 'info-recensione/:id',
     loadChildren: () => import('./info-recensione/info-recensione.module').then( m => m.InfoRecensionePageModule)
   },
 

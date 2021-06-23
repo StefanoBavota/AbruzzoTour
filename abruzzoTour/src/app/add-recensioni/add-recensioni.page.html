@@ -1,11 +1,12 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title></ion-title>
-            <!-- back button -->
-            <ion-buttons slot="start">
-              <ion-back-button></ion-back-button>
-            </ion-buttons>
-            <!-- end back button -->
+    <ion-title>Aggiungi Recensione</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -18,9 +19,6 @@
     <ion-label position="floating">Descrizione</ion-label>
     <ion-input [(ngModel)]="descrizione" type="text"></ion-input>
   </ion-item>
-  <ion-item>
-    <ion-label position="floating">Valutazione</ion-label>
-    <ion-input [(ngModel)]="valutazione" type="double"></ion-input>
-  </ion-item>
-  <ion-button type="button" (click)="addRecensione()" color="primary" shape="round" expand="block" [routerLink]="['/lista-percorsi']" >Aggiungi</ion-button>
+  <ion-button type="button" (click)="addRecensione()" color="primary" shape="round" expand="block"
+    [routerLink]="['/lista-percorsi']">Aggiungi</ion-button>
 </ion-content>
