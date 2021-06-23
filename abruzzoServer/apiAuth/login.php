@@ -19,11 +19,6 @@ if ($sql->num_rows > 0) {
         'email' => $user['email']
     );
 
-
  echo json_encode($payload);
  echo mysqli_error($con);
-
-
-    
-
 }

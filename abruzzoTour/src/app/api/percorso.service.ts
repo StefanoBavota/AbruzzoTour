@@ -24,4 +24,8 @@ export class PercorsoService {
   getPercorsoById(id){
     return this.http.get('http://localhost/abruzzo-tour/abruzzoServer/apiPercorso/getPercorsoById.php?id='+id);
   }
+
+  addToPreferiti(id, data){
+    return this.http.post('http://localhost/abruzzo-tour/abruzzoServer/apiPercorso/addToPreferiti.php?id='+id, data);
+  }
 }

@@ -10,10 +10,6 @@ $cognome = $data['cognome'];
 $email = $data['email'];
 $password = $data['password'];
 
-
-
-
-
 $q = mysqli_query($con, "INSERT INTO utenti (nome, cognome, email, password) VALUES ('$nome', '$cognome', '$email', '$password') ");
 
 if($q){
