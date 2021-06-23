@@ -3,12 +3,11 @@
 include "../config.php";
 $input = file_get_contents('php://input');
 $data = json_decode($input, true);
-$ut = 
 $message = array();
 $titolo = $data['titolo'];
 $descrizione = $data['descrizione'];
 $valutazione = $data['valutazione'];
-$id_utente = $
+$id_utente = $data['id_utente'];
 
 
 $q = mysqli_query($con, "INSERT INTO recensioni (titolo, descrizione, valutazione, id_utente) VALUES ('$titolo', '$descrizione','$valutazione', '$id_utente') ");

@@ -19,6 +19,6 @@ export class RecensioneService {
   //funzioni di interazione col db
 
   addRecensione(data) {
-    return this.http.post('http://localhost/abruzzo-tour/abruzzoServer/apiRec/create.php', data);
+    return this.http.post('http://localhost/abruzzo-tour/abruzzoServer/apiAuth/create.php', data);
   }
 }

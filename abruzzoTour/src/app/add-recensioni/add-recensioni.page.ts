@@ -8,9 +8,12 @@ import { RecensioneService } from '../api/recensione.service';
 })
 export class AddRecensioniPage implements OnInit {
 
+  userInfo: any;
   titolo: any;
   descrizione: any;
   valutazione: any;
+  id_utente: any;
+  isLogged: boolean;
 
 
   constructor(
@@ -18,6 +21,8 @@ export class AddRecensioniPage implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.isLogged = !!localStorage.getItem('login');
+    this.userInfo = JSON.parse(localStorage.getItem('login'));
   }
 
   addRecensione() {
@@ -26,6 +31,7 @@ export class AddRecensioniPage implements OnInit {
       titolo: this.titolo,
       descrizione: this.descrizione,
       valutazione: this.valutazione,
+      id_utente: this.userInfo.id,
     }
 
     this._apiService.addRecensione(data).subscribe((res: any) => {
@@ -34,10 +40,12 @@ export class AddRecensioniPage implements OnInit {
       this.descrizione = '';
       this.valutazione = '';
       alert('SUCCESS');
+
     }, (error: any) => {
       console.log("ERROR ===", error);
       alert('ERROR');
     })
   }
+  
 
 }

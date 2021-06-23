@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../api/auth.service';
 
 @Component({
   selector: 'app-recensioni',
@@ -7,9 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RecensioniPage implements OnInit {
 
-  constructor() { }
+  recensioni: any[];
+
+
+  constructor(
+    public _apiService: AuthService
+  ) { }
 
   ngOnInit() {
+    
+  }
+  getRecensioni() {
+    this._apiService.getRecensioni().subscribe((res: any) => {
+      console.log("SUCCESS ===", res);
+      this.recensioni = res;
+    }, (error: any) => {
+      console.log("ERROR ===", error);
+    })
   }
 
 }
