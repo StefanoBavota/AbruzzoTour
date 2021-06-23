@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Recensione personale</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Titolo</ion-label>
+    <ion-input [(ngModel)]="titolo" type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Descrizione</ion-label>
+    <ion-input [(ngModel)]="descrizione" type="text"></ion-input>
+  </ion-item>
+  <ion-button type="button" (click)="editRecensione()" color="primary" shape="round" expand="block"
+    [routerLink]="['/recensioni',id_utente]">Modifica</ion-button>
+</ion-content>

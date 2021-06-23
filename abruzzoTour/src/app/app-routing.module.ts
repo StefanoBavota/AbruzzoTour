@@ -38,10 +38,25 @@ const routes: Routes = [
   {
     path: 'lista-preferiti/:id',
     loadChildren: () => import('./lista-preferiti/lista-preferiti.module').then( m => m.ListaPreferitiPageModule)
-  },  {
+  },
+  {
     path: 'admin',
     loadChildren: () => import('./admin/admin.module').then( m => m.AdminPageModule)
   },
+
+  {
+    path: 'recensioni/:id',
+    loadChildren: () => import('./recensioni/recensioni.module').then( m => m.RecensioniPageModule)
+  },
+  {
+    path: 'add-recensioni/:id',
+    loadChildren: () => import('./add-recensioni/add-recensioni.module').then( m => m.AddRecensioniPageModule)
+  },
+  {
+    path: 'info-recensione/:id',
+    loadChildren: () => import('./info-recensione/info-recensione.module').then( m => m.InfoRecensionePageModule)
+  },
+
 
 
 
