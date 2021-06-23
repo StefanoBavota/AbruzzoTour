@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Giu 22, 2021 alle 22:54
+-- Creato il: Giu 23, 2021 alle 09:30
 -- Versione del server: 10.4.18-MariaDB
 -- Versione PHP: 7.3.27
 
@@ -52,6 +52,32 @@ INSERT INTO `percorsi` (`id`, `nome`, `difficolta`, `info`, `image`, `latitude`,
 -- --------------------------------------------------------
 
 --
+-- Struttura della tabella `preferiti`
+--
+
+CREATE TABLE `preferiti` (
+  `id` int(11) NOT NULL,
+  `id_percorso` int(11) NOT NULL,
+  `id_utente` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Struttura della tabella `recensioni`
+--
+
+CREATE TABLE `recensioni` (
+  `id` int(11) NOT NULL,
+  `titolo` varchar(100) NOT NULL,
+  `descrizione` text NOT NULL,
+  `valutazione` double NOT NULL,
+  `id_utente` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Struttura della tabella `utenti`
 --
 
@@ -83,6 +109,21 @@ ALTER TABLE `percorsi`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indici per le tabelle `preferiti`
+--
+ALTER TABLE `preferiti`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id_utente` (`id_utente`),
+  ADD KEY `id_percorso` (`id_percorso`);
+
+--
+-- Indici per le tabelle `recensioni`
+--
+ALTER TABLE `recensioni`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id_utente` (`id_utente`);
+
+--
 -- Indici per le tabelle `utenti`
 --
 ALTER TABLE `utenti`
@@ -100,10 +141,39 @@ ALTER TABLE `percorsi`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
+-- AUTO_INCREMENT per la tabella `preferiti`
+--
+ALTER TABLE `preferiti`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT per la tabella `recensioni`
+--
+ALTER TABLE `recensioni`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT per la tabella `utenti`
 --
 ALTER TABLE `utenti`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- Limiti per le tabelle scaricate
+--
+
+--
+-- Limiti per la tabella `preferiti`
+--
+ALTER TABLE `preferiti`
+  ADD CONSTRAINT `preferiti_ibfk_1` FOREIGN KEY (`id_utente`) REFERENCES `utenti` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `preferiti_ibfk_2` FOREIGN KEY (`id_percorso`) REFERENCES `percorsi` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Limiti per la tabella `recensioni`
+--
+ALTER TABLE `recensioni`
+  ADD CONSTRAINT `recensioni_ibfk_1` FOREIGN KEY (`id_utente`) REFERENCES `utenti` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
