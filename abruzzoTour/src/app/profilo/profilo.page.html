@@ -25,9 +25,6 @@
       Percorsi Personali
     </ion-button>
 
-    <ion-button *ngIf="!isLogged" shape="round" color="primary" expand="full" [routerLink]="['/login']">
-      Login
-    </ion-button>
     <ion-button *ngIf="isLogged" shape="round" color="primary" expand="full" (click)="logout()">
       Logout
     </ion-button>

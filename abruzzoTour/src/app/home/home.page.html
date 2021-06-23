@@ -1,6 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-buttons slot="start">
+    <ion-buttons slot="end">
       <ion-menu-button menu="main-menu"></ion-menu-button>
     </ion-buttons>
     <ion-title class="ion-text-center">
@@ -46,12 +46,18 @@
       </ion-col>
 
       <ion-col style="margin-top: 0.5rem;">
-        <div>
+        <div *ngIf="isLogged">
             <ion-avatar>
               <img src="../../assets/icon/profiloimg.jpeg" [routerLink]="['/profilo']" style="border-radius: 10%">
             </ion-avatar>
             <div class="text-center">Profilo</div>
         </div>
+        <div *ngIf="!isLogged">
+          <ion-avatar>
+            <img src="../../assets/icon/profiloimg.jpeg" [routerLink]="['/login']" style="border-radius: 10%">
+          </ion-avatar>
+          <div class="text-center">Login</div>
+      </div>
       </ion-col>
     </ion-row>
 
