@@ -2,44 +2,31 @@
   <ion-toolbar>
     <ion-title>Login</ion-title>
     <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
+      <ion-back-button [routerLink]="['/home']"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<!-- <ion-content [fullscreen]="true">
-  <ion-card id="colore">
-    <img src="../../assets/icon/logoimg.jpg">
-    <ion-list id="colore">
-      <ion-item color="#6aa84f">
-        <ion-label position="floating">Email</ion-label>
-        <ion-input type="email" [(ngModel)]="email"></ion-input>
-      </ion-item>
-      <ion-item color="#6aa84f">
-        <ion-label position="floating">Password</ion-label>
-        <ion-input type="password" [(ngModel)]="password"></ion-input>
-      </ion-item>
-      <ion-button type="button" (click)="login()" color="primary" shape="full" expand="block">Login</ion-button>
-    </ion-list>
-  </ion-card>
-  <div style="text-align: center;">
-    <p>Non hai un account? Registrati <a [routerLink]="['/register']">Qui!</a></p>
-  </div>
-</ion-content> -->
-
-
 <ion-content [fullscreen]="true">
-  <div id="header">
-    <img src="../../assets/icon/logoimg.jpg">
-  </div>
-
-  <ion-item color="#6aa84f">
-    <ion-label position="floating">Email</ion-label>
-    <ion-input type="email" [(ngModel)]="email"></ion-input>
-  </ion-item>
-  <ion-item color="#6aa84f">
-    <ion-label position="floating">Password</ion-label>
-    <ion-input type="password" [(ngModel)]="password"></ion-input>
-  </ion-item>
-  <ion-button type="button" (click)="login()" color="primary" shape="round" expand="block">Login</ion-button>
+  <ion-list id="colore" style="margin-top: 3rem;">
+    <div id="header">
+      <img src="../../assets/icon/logoimg.jpg">
+    </div>
+  
+    <ion-item color="#6aa84f">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="email" [(ngModel)]="email"></ion-input>
+    </ion-item>
+    <ion-item color="#6aa84f">
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" [(ngModel)]="password"></ion-input>
+    </ion-item>
+    <ion-button style="--background:#3f632f" type="button" (click)="login()" shape="round" expand="block">Login</ion-button>
+    <div style="text-align: center;">
+      <p>Non hai un account? Registrati <a [routerLink]="['/register']">Qui!</a></p>
+    </div>
+  </ion-list>
 </ion-content>

@@ -14,12 +14,13 @@ ion-toolbar {
 }*/
 
 ion-content {
-    --background: #6aa84f !important;
+    --background: #97F071 !important;
 
     #header {
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-top: 5%;
     }
 
     img {
@@ -29,7 +30,7 @@ ion-content {
         
     }
 
-    #form {
+    #colore {
         margin-top: 15%;
         padding-left: 30px;
         padding-right: 30px;
@@ -44,6 +45,16 @@ ion-content {
             --box-shadow: none;
         }
     }
+}
+
+ion-list {
+    margin-top: 35px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-transform: initial;
+    border-radius: 20px;
+    box-shadow: 1px 8px 8px 0px rgba(0,0,0,0.05);
+    --box-shadow: none;
 }
 
 //colore tabella
