@@ -28,6 +28,13 @@ ion-list {
     --box-shadow: none;
 }
 
+ion-item {
+    margin-bottom: 5px;
+}
+ion-icon {
+    margin-left: 10%;
+}
+
 //centrare titolo
 ion-button {
 	z-index: 100;

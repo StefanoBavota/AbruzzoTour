@@ -17,6 +17,12 @@
       <ion-card-title class="testo">{{ nome }}</ion-card-title>
     </ion-card-header>
     <ion-card-content class="testo">{{ info }}</ion-card-content>
+
+    <div class="Aligner">
+      <ion-button style="--background:#3f632f" size="small" shape="round" [routerLink]="['/view-map',id,latitude,longitude]" class="center">
+        <ion-icon slot="icon-only" name="map-sharp"></ion-icon>
+        </ion-button>
+    </div>
   </ion-card>
 
   <ion-slides [options]="{ slidesPerView: 'auto', zoom: false, grabCursor: true }">
@@ -33,8 +39,6 @@
 
   <ion-row>
     <ion-col class="ion-text-center">
-      <ion-button style="--background:#3f632f" shape="round" [routerLink]="['/view-map',id,latitude,longitude]"
-        class="center">Mappa</ion-button>
       <ion-button style="--background:#3f632f" shape="round" [routerLink]="['/add-recensioni',id]" class="center">
         Recensisci</ion-button>
     </ion-col>

@@ -11,9 +11,17 @@
 </ion-header>
 
 <ion-content>
+  <div class="Aligner">
+    <ion-button size="small" style="--background:#3f632f" type="button"  shape="round" [routerLink]="['/add-percorso/']">Aggiungi Percorso</ion-button>
+  </div>
   <ion-list id="colore" style="margin-top: 1rem;" lines="full">
 
     <ion-item side="end" color="#6aa84f" lines="insert" *ngFor="let percorso of percorsi">
+
+      <ion-thumbnail class="ion-margin-end">
+        <img src="{{ percorso.image }}">
+      </ion-thumbnail>
+
       <ion-label id="colore" [routerLink]="['/info-percorso/',percorso.id]">
         <h2>{{ percorso.nome }}</h2>
       </ion-label>
@@ -24,6 +32,5 @@
       </div>
     </ion-item>
 
-    <ion-button type="button" color="primary" shape="round" expand="block" [routerLink]="['/add-percorso/']">Aggiungi Percorso</ion-button>
   </ion-list>
 </ion-content>

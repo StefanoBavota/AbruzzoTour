@@ -11,6 +11,38 @@
 </ion-header>
 
 <ion-content>
+  <ion-list id="colore" style="margin-top: 0.3rem;">
+    <ion-item>
+      <ion-label position="floating">Nome</ion-label>
+      <ion-input [(ngModel)]="nome" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item id="test">
+      <ion-label position="floating">Info</ion-label>
+      <ion-textarea [(ngModel)]="info" type="text" rows="7" cols="20"></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Immagine</ion-label>
+      <ion-input [(ngModel)]="image" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Latitudine</ion-label>
+      <ion-input [(ngModel)]="latitude" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Longitudine</ion-label>
+      <ion-input [(ngModel)]="longitude" type="text"></ion-input>
+    </ion-item>
+
+    <ion-button style="--background:#3f632f" type="button" (click)="editPercorso()" shape="round" expand="block">Modifica</ion-button>
+  </ion-list>
+</ion-content>
+
+<!--
+
   <ion-item>
     <ion-label position="floating">Nome</ion-label>
     <ion-input [(ngModel)]="nome" type="text"></ion-input>
@@ -37,4 +69,5 @@
   </ion-item>
 
   <ion-button type="button" (click)="editPercorso()" color="primary" shape="round" expand="block">Modifica</ion-button>
-</ion-content>
+
+-->

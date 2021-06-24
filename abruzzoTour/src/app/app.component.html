@@ -15,8 +15,9 @@
         <ion-button style="--background:#6aa84f" [routerLink]="['/lista-percorsi']" type="button" shape="round" expand="block">Lista Percorsi</ion-button>
         <ion-button style="--background:#6aa84f" *ngIf="isLogged" [routerLink]="['/profilo']" type="button" shape="round" expand="block">Profilo</ion-button>
         <ion-button style="--background:#6aa84f" *ngIf="isAdmin == 1" [routerLink]="['/admin']" type="button" shape="round" expand="block">Admin</ion-button>
-        <ion-button style="--background:#6aa84f" *ngIf="isLogged" [routerLink]="['/login']" (click)="logout()" type="button" shape="round" expand="block">Logout</ion-button>
-        <ion-button style="--background:#6aa84f" *ngIf="!isLogged" [routerLink]="['/login']" (click)="logout()" type="button" shape="round" expand="block">Login</ion-button>
+        
+        <ion-button id="position" size="small" style="--background:#6aa84f" *ngIf="isLogged" [routerLink]="['/login']" (click)="logout()" type="button" shape="round" expand="block">Logout</ion-button>
+        <ion-button id="position" size="small" style="--background:#6aa84f" *ngIf="!isLogged" [routerLink]="['/login']" (click)="logout()" type="button" shape="round" expand="block">Login</ion-button>
         
       </ion-menu-toggle>
 
@@ -24,20 +25,3 @@
   </ion-menu>
   <ion-router-outlet id="main"></ion-router-outlet>
 </ion-app>
-
-<!--
-<ion-button [routerLink]="['/home']" type="button" shape="round" expand="block">Home</ion-button>
-<ion-button [routerLink]="['/lista-percorsi'] type="button" shape="round" expand="block">Lista Percorsi</ion-button>
-<ion-button [routerLink]="['/profilo']" type="button" shape="round" expand="block">Profilo</ion-button>
-<ion-button [routerLink]="['/admin']" type="button" shape="round" expand="block">Admin</ion-button>
-<ion-button  [routerLink]="['/login']" (click)="logout()" type="button" shape="round" expand="block">Logout</ion-button>
-<ion-button [routerLink]="['/login']" (click)="logout()" type="button" shape="round" expand="block">Login</ion-button>
-<ion-item *ngIf="!isLogged" [routerLink]="['/login']">Login</ion-item>
-
-<ion-item [routerLink]="['/home']" ion-menu-toggle auto-hide="false">Home</ion-item>
-<ion-item [routerLink]="['/lista-percorsi']">Lista Percorsi</ion-item>
-<ion-item *ngIf="isLogged" [routerLink]="['/profilo']">Profilo</ion-item>
-<ion-item *ngIf="isAdmin == 1" [routerLink]="['/admin']">Admin</ion-item>
-<ion-item *ngIf="isLogged" [routerLink]="['/login']" (click)="logout()">Logout</ion-item>
-<ion-item *ngIf="!isLogged" [routerLink]="['/login']">Login</ion-item>
--->

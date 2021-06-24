@@ -12,16 +12,42 @@ ion-content {
   background-color: #6aa84f;
 }
 
-ion-img {
+img {
   width: 55px;
   height: 55px;
   border-radius: 50%;
   
 }
 
+ion-list {
+  margin-top: 35px;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-transform: initial;
+  border-radius: 20px;
+  box-shadow: 1px 8px 8px 0px rgba(0,0,0,0.05);
+  --box-shadow: none;
+}
+
+ion-item {
+  margin-bottom: 5px;
+}
+ion-icon {
+  margin-left: 50%;
+}
+
+.Aligner {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+
 //centrare titolo
 ion-button {
-	z-index: 100;
+  z-index: 100;
+  margin-top: 1rem;
+  
 }
 ion-title {
   position: absolute;

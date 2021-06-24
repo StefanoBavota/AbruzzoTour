@@ -11,19 +11,22 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-    <ion-button class="Top" style="--background:#6aa84f" *ngIf="isLogged" shape="round" expand="full"[routerLink]="['/lista-preferiti/',id_utente]">
+    <ion-button size="large" class="Top" style="--background:#6aa84f" *ngIf="isLogged" shape="round" expand="full"[routerLink]="['/lista-preferiti/',id_utente]">
+      <ion-icon slot= "start" name= "heart"></ion-icon>
       Preferiti
     </ion-button>
 
-    <ion-button style="--background:#6aa84f" *ngIf="isLogged" shape="round" expand="full" [routerLink]="['/recensioni',id_utente]">
+    <ion-button size="large" style="--background:#6aa84f" *ngIf="isLogged" shape="round" expand="full" [routerLink]="['/recensioni',id_utente]">
+      <ion-icon slot= "start" name= "reader"></ion-icon>
       Recensioni
     </ion-button>
 
-    <ion-button style="--background:#6aa84f" *ngIf="isAdmin == 1" shape="round" expand="full" [routerLink]="['/admin']">
+    <ion-button size="large" style="--background:#6aa84f" *ngIf="isAdmin == 1" shape="round" expand="full" [routerLink]="['/admin']">
+      <ion-icon slot= "start" name= "person"></ion-icon>
       Admin
     </ion-button>
 
-    <ion-button style="--background:#6aa84f" *ngIf="isLogged" shape="round" expand="full" (click)="logout()">
+    <ion-button id="position" size="small" style="--background:#6aa84f" *ngIf="isLogged" shape="round" (click)="logout()">
       Logout
     </ion-button>
 </ion-content>
