@@ -13,6 +13,7 @@ export class ListaPercorsiPage implements OnInit {
   isLogged: boolean;
   userInfo: any;
   id_utente: any;
+  image: any;
 
   constructor(
     private alertController: AlertController,

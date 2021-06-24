@@ -11,20 +11,32 @@ ion-content {
     background-color: #6aa84f;
 }
 
-/*ion-list {
-    background-color: #23588d !important;
+ion-img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    
+}
+
+ion-icon {
+    margin-left: 20px;
+}
+
+ion-list {
+    background-color: #6aa84f !important;
     color: #ffffff;
 }
 
-ion-label {
-    background-color: #d1112b !important;
-    color: #ffffff;
+//centrare titolo
+ion-button {
+	z-index: 100;
 }
-
-ion-item {
-    padding:20px;
-    --ion-background-color: #bdc00c !important;
-    background: #bdc00c; 
-}*/
-
+ion-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
 

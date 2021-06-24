@@ -41,3 +41,16 @@ ion-avatar {
   height: 100px;
   width: 100px;
 }
+
+//centrare titolo
+ion-button {
+	z-index: 100;
+}
+ion-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
