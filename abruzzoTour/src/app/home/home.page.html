@@ -3,13 +3,58 @@
     <ion-buttons slot="end">
       <ion-menu-button menu="main-menu"></ion-menu-button>
     </ion-buttons>
-    <ion-title class="ion-text-center">
-      Abruzzo Tour
-    </ion-title>
+    <ion-title class="ion-text-center">Abruzzo Tour</ion-title>
   </ion-toolbar>
 </ion-header>
 
 
+
+<div class="Aligner">
+
+  <ion-grid class="mygrid">
+    
+    
+      <ion-col style="margin-right: 1rem;">
+        <div>
+            <ion-avatar>
+              <img src="../../assets/icon/percorsiimg.jpeg" [routerLink]="['/lista-percorsi']" style="border-radius: 10%">
+            </ion-avatar>
+            <div class="text-center">Percorsi</div>
+        </div>
+      </ion-col>
+
+      <ion-col style="margin-top: 0.5rem;">
+        <div *ngIf="isLogged">
+            <ion-avatar>
+              <img src="../../assets/icon/profiloimg.jpeg" [routerLink]="['/profilo']" style="border-radius: 10%">
+            </ion-avatar>
+            <div class="text-center">Profilo</div>
+        </div>
+        <div *ngIf="!isLogged">
+          <ion-avatar>
+            <img src="../../assets/icon/profiloimg.jpeg" [routerLink]="['/login']" style="border-radius: 10%">
+          </ion-avatar>
+          <div class="text-center">Login</div>
+        </div>
+      </ion-col>
+
+      <ion-col style="margin-right: 1rem; margin-top: 0.5rem;">
+        <div>
+            <ion-avatar>
+              <img src="../../assets/icon/impostazioniimg.jpeg" [routerLink]="['']" style="border-radius: 10%">
+            </ion-avatar>
+            <div class="text-center">Impostazioni</div>
+        </div>
+      </ion-col>
+    
+
+  </ion-grid>
+  
+</div>
+
+
+
+<!--
 
 <div class="Aligner">
 
@@ -64,3 +109,5 @@
   </ion-grid>
   
 </div>
+
+-->

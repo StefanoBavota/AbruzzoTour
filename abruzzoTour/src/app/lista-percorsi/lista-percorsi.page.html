@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Lista Percorsi</ion-title>
+    <ion-title class="ion-text-center">Lista Percorsi</ion-title>
     <ion-buttons slot="start">
       <ion-back-button [routerLink]="['/home']"></ion-back-button>
     </ion-buttons>
@@ -11,15 +11,29 @@
 </ion-header>
 
 <ion-content>
-  <ion-list id="colore" style="margin-top: 1rem;" lines="full">
+  <ion-list id="colore" style="margin-top: 1rem;">
     <ion-item side="end" color="#6aa84f" lines="insert" *ngFor="let percorso of percorsi">
-      <ion-label id="colore" [routerLink]="['/info-percorso/',percorso.id]">
-        <h2>{{ percorso.nome }}</h2>
-      </ion-label>
-
+      <ion-thumbnail class="ion-margin-end">
+        <ion-img [routerLink]="['/info-percorso/',percorso.id]" src="{{ percorso.image }}"></ion-img>
+      </ion-thumbnail>
+      <ion-label id="colore" [routerLink]="['/info-percorso/',percorso.id]"><p>{{ percorso.nome }}</p></ion-label>
       <div class="item-note" *ngIf="isLogged">
-        <ion-icon name="heart-outline" style="zoom: 2.0;" (click)="addToPreferiti(percorso.id)"></ion-icon>
+        <ion-icon name="heart-outline" style="zoom: 2;" (click)="addToPreferiti(percorso.id)"></ion-icon>
       </div>
     </ion-item>
   </ion-list>
 </ion-content>
+
+<!--
+
+<ion-item side="end" color="#6aa84f" lines="insert" *ngFor="let percorso of percorsi">
+  <ion-label id="colore" [routerLink]="['/info-percorso/',percorso.id]">
+    <h2>{{ percorso.nome }}</h2>
+  </ion-label>
+
+  <div class="item-note" *ngIf="isLogged">
+    <ion-icon name="heart-outline" style="zoom: 2.0;" (click)="addToPreferiti(percorso.id)"></ion-icon>
+  </div>
+</ion-item>
+
+-->

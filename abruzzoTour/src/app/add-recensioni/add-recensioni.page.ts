@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
+import { PercorsoService } from '../api/percorso.service';
 import { RecensioneService } from '../api/recensione.service';
 
 @Component({
@@ -16,16 +17,19 @@ export class AddRecensioniPage implements OnInit {
   id_utente: any;
   isLogged: boolean;
   id_percorso: any;
+  image: any;
 
 
   constructor(
     private route: ActivatedRoute,
     private _recensioniService: RecensioneService,
+    private _percorsoService: PercorsoService,
     private alertController: AlertController,
     private router: Router
   ) {
     this.route.params.subscribe((param: any) => {
       this.id_percorso = param.id;
+      this.getPercorsoById(this.id_percorso);
     })
   }
 
@@ -48,5 +52,17 @@ export class AddRecensioniPage implements OnInit {
         console.log("ERROR ===", error);
       })
     }
+  }
+
+  async getPercorsoById(id) {
+    this._percorsoService.getPercorsoById(id).subscribe((res: any) => {
+      let percorso = res[0];
+      this.image = percorso.image;
+    }, async (err: any) => {
+      console.log("ERROR", err);
+      const alert = await this.alertController.create({ message: 'Ops, qualcosa è andato storto', buttons: ['OK'] });
+      await alert.present();
+      this.router.navigateByUrl('/lista-percorsi');
+    })
   }
 }

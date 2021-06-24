@@ -12,7 +12,6 @@
 
 <ion-content>
   <ion-list id="colore" style="margin-top: 1rem;" lines="full">
-    <ion-button type="button" color="primary" shape="round" expand="block" [routerLink]="['/add-percorso/']">Aggiungi Percorso</ion-button>
 
     <ion-item side="end" color="#6aa84f" lines="insert" *ngFor="let percorso of percorsi">
       <ion-label id="colore" [routerLink]="['/info-percorso/',percorso.id]">
@@ -24,5 +23,7 @@
         <ion-icon name="trash-outline" style="zoom: 2.0;" (click)="deletePercorso(percorso.id)"></ion-icon>
       </div>
     </ion-item>
+
+    <ion-button type="button" color="primary" shape="round" expand="block" [routerLink]="['/add-percorso/']">Aggiungi Percorso</ion-button>
   </ion-list>
 </ion-content>

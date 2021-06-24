@@ -13,5 +13,17 @@ ion-content {
 
 ion-toolbar {
   --background: #3f632f;
-  height: 70px;
+}
+
+//centrare titolo
+ion-button {
+	z-index: 100;
+}
+ion-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
 }
