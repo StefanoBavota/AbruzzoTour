@@ -56,6 +56,19 @@ const routes: Routes = [
     path: 'info-recensione/:id',
     loadChildren: () => import('./info-recensione/info-recensione.module').then( m => m.InfoRecensionePageModule)
   },
+  {
+    path: 'edit-percorso/:id',
+    loadChildren: () => import('./edit-percorso/edit-percorso.module').then( m => m.EditPercorsoPageModule)
+  },  {
+    path: 'add-percorso',
+    loadChildren: () => import('./add-percorso/add-percorso.module').then( m => m.AddPercorsoPageModule)
+  },
+  {
+    path: 'info-app',
+    loadChildren: () => import('./info-app/info-app.module').then( m => m.InfoAppPageModule)
+  },
+
+
 
 
 

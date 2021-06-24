@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Giu 23, 2021 alle 23:34
+-- Creato il: Giu 24, 2021 alle 11:12
 -- Versione del server: 10.4.18-MariaDB
 -- Versione PHP: 7.3.27
 
@@ -30,7 +30,6 @@ SET time_zone = "+00:00";
 CREATE TABLE `percorsi` (
   `id` int(11) NOT NULL,
   `nome` varchar(100) NOT NULL,
-  `difficolta` int(11) NOT NULL,
   `info` text NOT NULL,
   `image` varchar(255) NOT NULL,
   `latitude` double NOT NULL,
@@ -41,10 +40,10 @@ CREATE TABLE `percorsi` (
 -- Dump dei dati per la tabella `percorsi`
 --
 
-INSERT INTO `percorsi` (`id`, `nome`, `difficolta`, `info`, `image`, `latitude`, `longitude`) VALUES
-(8, 'Cascata di San Giovanni', 4, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac elementum magna. Pellentesque mi libero, pharetra sit amet elit dictum, egestas suscipit metus. Donec vulputate posuere tortor, sed dignissim enim sagittis consectetur. Proin consectetur, libero et cursus dignissim, velit eros auctor purus, posuere tempor arcu orci nec velit. Vestibulum eget lorem eget urna ullamcorper maximus vitae sed tortor.', 'https://www.parcomajella.it/foto/grandi/cascata-san-giovanni-3.jpg', 42.16529611416041, 14.151688792061758),
-(14, 'Valle dell orfento', 3, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac elementum magna. Pellentesque mi libero, pharetra sit amet elit dictum, egestas suscipit metus. Donec vulputate posuere tortor, sed dignissim enim sagittis consectetur. Proin consectetur, libero et cursus dignissim, velit eros auctor purus, posuere tempor arcu orci nec velit. Vestibulum eget lorem eget urna ullamcorper maximus vitae sed tortor.', 'https://www.parcomajella.it/foto/grandi/scalelle_6-2-2-3-1-1-1-1-3-1-2-1-1-2-1-1-2-1-2-1.jpg', 42.1603453945707, 14.010251469318495),
-(15, 'Lago San Domenico', 5, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac elementum magna. Pellentesque mi libero, pharetra sit amet elit dictum, egestas suscipit metus. Donec vulputate posuere tortor, sed dignissim enim sagittis consectetur. Proin consectetur, libero et cursus dignissim, velit eros auctor purus, posuere tempor arcu orci nec velit. Vestibulum eget lorem eget urna ullamcorper maximus vitae sed tortor.', 'https://www.visitareabruzzo.it/wp-content/uploads/2020/07/lago-di-san-domenico.jpg', 41.942852564580406, 13.829321429242826);
+INSERT INTO `percorsi` (`id`, `nome`, `info`, `image`, `latitude`, `longitude`) VALUES
+(8, 'Cascata di San Giovanni', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac elementum magna. Pellentesque mi libero, pharetra sit amet elit dictum, egestas suscipit metus. Donec vulputate posuere tortor, sed dignissim enim sagittis consectetur. Proin consectetur, libero et cursus dignissim, velit eros auctor purus, posuere tempor arcu orci nec velit. Vestibulum eget lorem eget urna ullamcorper maximus vitae sed tortor.', 'https://www.parcomajella.it/foto/grandi/cascata-san-giovanni-3.jpg', 42.16529611416041, 14.151688792061758),
+(14, 'Valle dell orfento', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac elementum magna. Pellentesque mi libero, pharetra sit amet elit dictum, egestas suscipit metus. Donec vulputate posuere tortor, sed dignissim enim sagittis consectetur. Proin consectetur, libero et cursus dignissim, velit eros auctor purus, posuere tempor arcu orci nec velit. Vestibulum eget lorem eget urna ullamcorper maximus vitae sed tortor.', 'https://www.parcomajella.it/foto/grandi/scalelle_6-2-2-3-1-1-1-1-3-1-2-1-1-2-1-1-2-1-2-1.jpg', 42.1603453945707, 14.010251469318495),
+(15, 'Lago San Domenico', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac elementum magna. Pellentesque mi libero, pharetra sit amet elit dictum, egestas suscipit metus. Donec vulputate posuere tortor, sed dignissim enim sagittis consectetur. Proin consectetur, libero et cursus dignissim, velit eros auctor purus, posuere tempor arcu orci nec velit. Vestibulum eget lorem eget urna ullamcorper maximus vitae sed tortor.', 'https://www.visitareabruzzo.it/wp-content/uploads/2020/07/lago-di-san-domenico.jpg', 41.942852564580406, 13.829321429242826);
 
 -- --------------------------------------------------------
 
@@ -63,10 +62,26 @@ CREATE TABLE `preferiti` (
 --
 
 INSERT INTO `preferiti` (`id_preferiti`, `id_percorso`, `id_utente`) VALUES
-(55, 15, 10),
 (58, 8, 3),
-(59, 14, 3),
-(60, 15, 3);
+(59, 14, 3);
+
+-- --------------------------------------------------------
+
+--
+-- Struttura della tabella `prova`
+--
+
+CREATE TABLE `prova` (
+  `id` int(11) NOT NULL,
+  `image` blob NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dump dei dati per la tabella `prova`
+--
+
+INSERT INTO `prova` (`id`, `image`) VALUES
+(15, 0x433a66616b6570617468496d6d6167696e656565652e706e67);
 
 -- --------------------------------------------------------
 
@@ -133,6 +148,12 @@ ALTER TABLE `preferiti`
   ADD KEY `id_percorso` (`id_percorso`);
 
 --
+-- Indici per le tabelle `prova`
+--
+ALTER TABLE `prova`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indici per le tabelle `recensioni`
 --
 ALTER TABLE `recensioni`
@@ -155,13 +176,19 @@ ALTER TABLE `utenti`
 -- AUTO_INCREMENT per la tabella `percorsi`
 --
 ALTER TABLE `percorsi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT per la tabella `preferiti`
 --
 ALTER TABLE `preferiti`
   MODIFY `id_preferiti` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
+
+--
+-- AUTO_INCREMENT per la tabella `prova`
+--
+ALTER TABLE `prova`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT per la tabella `recensioni`

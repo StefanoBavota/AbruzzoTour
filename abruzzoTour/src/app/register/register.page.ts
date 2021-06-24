@@ -23,7 +23,6 @@ export class RegisterPage implements OnInit {
 
   register() {
     if (this.nome && this.cognome && this.email && this.password) {
-      // testare: console.log(this.nome, this.difficolta);
       let data = {
         nome: this.nome,
         cognome: this.cognome,
