@@ -17,7 +17,7 @@
       Preferiti
     </ion-button>
 
-    <ion-button *ngIf="isLogged" shape="round" color="primary" expand="full">
+    <ion-button *ngIf="isLogged" shape="round" color="primary" expand="full" [routerLink]="['/recensioni',id_utente]">
       Recensioni
     </ion-button>
 

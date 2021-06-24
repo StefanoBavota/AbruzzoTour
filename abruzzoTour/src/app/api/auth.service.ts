@@ -16,11 +16,6 @@ export class AuthService {
     this.headers.append('Access-Control-Allow-Origin', '*');
   }
 
-  //funzioni di interazione col db
-  getUserById(id){
-    return this.http.get('http://localhost/abruzzo-tour/abruzzoServer/apiAuth/getUserById.php?id='+id);
-  }
-
   login(data) {
     return this.http.post('http://localhost/abruzzo-tour/abruzzoServer/apiAuth/login.php', data);
   }

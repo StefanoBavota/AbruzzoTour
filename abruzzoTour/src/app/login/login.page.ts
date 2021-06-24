@@ -27,10 +27,10 @@ export class LoginPage implements OnInit {
     }
 
     this._apiService.login(data).subscribe((res: any) => {
-      //console.log("SUCCESS ===", res);
       localStorage.setItem("login", JSON.stringify(res));
       this.isLogged = !!localStorage.getItem('login');
-      this.router.navigateByUrl('/home');
+      //this.router.navigateByUrl('/home');
+      window.location.href = '/home';
       //console.log("RETRIEVE ===", localStorage.getItem('login'));      
     }, (error: any) => {
       console.log("ERROR ===", error);

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Giu 23, 2021 alle 15:29
+-- Creato il: Giu 23, 2021 alle 23:34
 -- Versione del server: 10.4.18-MariaDB
 -- Versione PHP: 7.3.27
 
@@ -78,9 +78,17 @@ CREATE TABLE `recensioni` (
   `id` int(11) NOT NULL,
   `titolo` varchar(100) NOT NULL,
   `descrizione` text NOT NULL,
-  `valutazione` double NOT NULL,
-  `id_utente` int(11) NOT NULL
+  `id_utente` int(11) NOT NULL,
+  `id_percorso` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dump dei dati per la tabella `recensioni`
+--
+
+INSERT INTO `recensioni` (`id`, `titolo`, `descrizione`, `id_utente`, `id_percorso`) VALUES
+(1, 'Divertente', 'Lorem ipsum dolore sit amne', 3, 8),
+(6, 'bello', 'sdfgagagafgadgghjfghj', 3, 14);
 
 -- --------------------------------------------------------
 
@@ -129,7 +137,8 @@ ALTER TABLE `preferiti`
 --
 ALTER TABLE `recensioni`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `id_utente` (`id_utente`);
+  ADD KEY `id_utente` (`id_utente`),
+  ADD KEY `id_percorso` (`id_percorso`);
 
 --
 -- Indici per le tabelle `utenti`
@@ -158,7 +167,7 @@ ALTER TABLE `preferiti`
 -- AUTO_INCREMENT per la tabella `recensioni`
 --
 ALTER TABLE `recensioni`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT per la tabella `utenti`
@@ -181,7 +190,8 @@ ALTER TABLE `preferiti`
 -- Limiti per la tabella `recensioni`
 --
 ALTER TABLE `recensioni`
-  ADD CONSTRAINT `recensioni_ibfk_1` FOREIGN KEY (`id_utente`) REFERENCES `utenti` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `recensioni_ibfk_1` FOREIGN KEY (`id_utente`) REFERENCES `utenti` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `recensioni_ibfk_2` FOREIGN KEY (`id_percorso`) REFERENCES `percorsi` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

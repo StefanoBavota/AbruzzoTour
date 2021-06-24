@@ -33,7 +33,6 @@ export class ListaPreferitiPage implements OnInit {
   }
 
   deletePreferito(id){
-    console.log("lol", id);
     this._percorsoService.deletePreferito(id).subscribe((res: any) => {
       this.getPreferiti(this.id)
     }, (err: any) => {
