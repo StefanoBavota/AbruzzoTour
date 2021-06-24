@@ -18,13 +18,14 @@ ion-img {
     
 }
 
-ion-icon {
-    margin-left: 20px;
-}
-
 ion-list {
-    background-color: #6aa84f !important;
-    color: #ffffff;
+    margin-top: 35px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-transform: initial;
+    border-radius: 20px;
+    box-shadow: 1px 8px 8px 0px rgba(0,0,0,0.05);
+    --box-shadow: none;
 }
 
 //centrare titolo
@@ -39,4 +40,3 @@ ion-title {
   height: 100%;
   text-align: center;
 }
-
