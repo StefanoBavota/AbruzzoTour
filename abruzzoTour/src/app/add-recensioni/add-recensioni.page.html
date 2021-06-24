@@ -13,35 +13,19 @@
 <ion-content>
   <ion-list id="colore" style="margin-top: 3rem;">
     <div id="header">
-      <img src="../../assets/icon/logoimg.jpg"> <!--Immagine Percorso-->
+      <img src="{{ image }}">
+      <!--Immagine Percorso-->
     </div>
-  
+
     <ion-item color="#6aa84f">
       <ion-label position="floating">Titolo</ion-label>
       <ion-input [(ngModel)]="titolo" type="text"></ion-input>
     </ion-item>
     <ion-item color="#6aa84f">
       <ion-label position="floating">Descrizione</ion-label>
-      <ion-input [(ngModel)]="descrizione" type="text"></ion-input>
+      <ion-textarea [(ngModel)]="descrizione" type="text" rows="5" cols="20"></ion-textarea>
     </ion-item>
     <ion-button style="--background:#3f632f" type="button" (click)="addRecensione()" shape="round" expand="block"
-    [routerLink]="['/lista-percorsi']">Aggiungi</ion-button>
+      [routerLink]="['/lista-percorsi']">Aggiungi</ion-button>
   </ion-list>
 </ion-content>
-
-<!--
-
-<ion-content>
-  <ion-item color="#6aa84f">
-    <ion-label position="floating">Titolo</ion-label>
-    <ion-input [(ngModel)]="titolo" type="text"></ion-input>
-  </ion-item>
-  <ion-item color="#6aa84f">
-    <ion-label position="floating">Descrizione</ion-label>
-    <ion-input [(ngModel)]="descrizione" type="text"></ion-input>
-  </ion-item>
-  <ion-button style="--background:#3f632f" type="button" (click)="addRecensione()" shape="round" expand="block"
-    [routerLink]="['/lista-percorsi']">Aggiungi</ion-button>
-</ion-content>
-
--->

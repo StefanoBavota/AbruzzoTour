@@ -18,7 +18,7 @@
       </ion-thumbnail>
       <ion-label id="colore" [routerLink]="['/info-percorso/',percorso.id]"><p>{{ percorso.nome }}</p></ion-label>
       <div class="item-note" *ngIf="isLogged">
-        <ion-icon name="heart-outline" style="zoom: 1.2;" (click)="addToPreferiti(percorso.id)"></ion-icon>
+        <ion-icon name="heart-outline" style="zoom: 2;" (click)="addToPreferiti(percorso.id)"></ion-icon>
       </div>
     </ion-item>
   </ion-list>

@@ -17,7 +17,7 @@
   </ion-item>
   <ion-item>
     <ion-label position="floating">Descrizione</ion-label>
-    <ion-input [(ngModel)]="descrizione" type="text"></ion-input>
+    <ion-textarea [(ngModel)]="descrizione" type="text" rows="5" cols="20"></ion-textarea>
   </ion-item>
   <ion-button type="button" (click)="editRecensione()" color="primary" shape="round" expand="block"
     [routerLink]="['/recensioni',id_utente]">Modifica</ion-button>
