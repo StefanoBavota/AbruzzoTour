@@ -43,7 +43,6 @@ export class ListaPercorsiPage implements OnInit {
     }
 
     this._percorsoService.addToPreferiti(id, data).subscribe(async (res: any) => {
-      console.log("SUCCESS", res);
       const alert = await this.alertController.create({ message: 'Percorso aggiunto alla lista dei preferiti', buttons: ['OK'] });
       await alert.present();
     }, async (err: any) => {

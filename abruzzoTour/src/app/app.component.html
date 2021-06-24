@@ -16,7 +16,10 @@
         <ion-button style="--background:#6aa84f" *ngIf="isLogged" [routerLink]="['/profilo']" type="button" shape="round" expand="block">Profilo</ion-button>
         <ion-button style="--background:#6aa84f" *ngIf="isAdmin == 1" [routerLink]="['/admin']" type="button" shape="round" expand="block">Admin</ion-button>
         
-        <ion-button id="position" size="small" style="--background:#6aa84f" *ngIf="isLogged" [routerLink]="['/login']" (click)="logout()" type="button" shape="round" expand="block">Logout</ion-button>
+        <ion-button id="position" size="small" style="--background:#6aa84f" *ngIf="isLogged" [routerLink]="['/login']" (click)="logout()" type="button" shape="round" expand="block">
+          Logout
+          <ion-icon slot= "start" name="log-out-outline"></ion-icon>
+        </ion-button>
         <ion-button id="position" size="small" style="--background:#6aa84f" *ngIf="!isLogged" [routerLink]="['/login']" (click)="logout()" type="button" shape="round" expand="block">Login</ion-button>
         
       </ion-menu-toggle>

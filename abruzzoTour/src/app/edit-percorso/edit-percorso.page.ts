@@ -24,7 +24,6 @@ export class EditPercorsoPage implements OnInit {
   ) {
     this.route.params.subscribe((param: any) => {
       this.id = param.id;
-      console.log(this.id);
       this.getPercorsoById(this.id);
     })
   }

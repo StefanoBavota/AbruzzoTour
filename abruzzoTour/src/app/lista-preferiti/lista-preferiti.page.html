@@ -27,5 +27,10 @@
       </div>
 
     </ion-item>
+    <!-- se la lista è vuota -->
+    <ion-button id="position" size="default" style="--background:#6aa84f" *ngIf="preferiti <= 0" shape="round" (click)="logout()">
+      <ion-icon slot= "start" name="log-out-outline"></ion-icon>
+      Visualizza Percorsi
+    </ion-button>
   </ion-list>
 </ion-content>

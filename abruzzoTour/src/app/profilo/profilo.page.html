@@ -26,7 +26,8 @@
       Admin
     </ion-button>
 
-    <ion-button id="position" size="small" style="--background:#6aa84f" *ngIf="isLogged" shape="round" (click)="logout()">
+    <ion-button id="position" size="default" style="--background:#6aa84f" *ngIf="isLogged" shape="round" (click)="logout()">
+      <ion-icon slot= "start" name="log-out-outline"></ion-icon>
       Logout
     </ion-button>
 </ion-content>
