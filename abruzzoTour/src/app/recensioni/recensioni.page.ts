@@ -43,6 +43,4 @@ export class RecensioniPage implements OnInit {
       console.log("ERROR", err);
     })
   }
-
-
 }

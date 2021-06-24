@@ -36,4 +36,16 @@ export class PercorsoService {
   deletePreferito(id){
     return this.http.delete('http://localhost/abruzzo-tour/abruzzoServer/apiPercorso/deletePreferito.php?id='+id);
   }
+
+  deletePercorso(id){
+    return this.http.delete('http://localhost/abruzzo-tour/abruzzoServer/apiPercorso/deletePercorso.php?id='+id);
+  }
+
+  editPercorso(id, data){
+    return this.http.put('http://localhost/abruzzo-tour/abruzzoServer/apiPercorso/updatePercorso.php?id='+id, data);
+  }
+
+  createPercorso(data){
+    return this.http.post('http://localhost/abruzzo-tour/abruzzoServer/apiPercorso/createPercorso.php', data);
+  }
 }

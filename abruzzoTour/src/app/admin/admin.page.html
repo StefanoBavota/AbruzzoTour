@@ -1,15 +1,28 @@
 <ion-header>
   <ion-toolbar>
-    <!-- back button -->
+    <ion-title>Admin</ion-title>
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <!-- end back button -->
-    <ion-title>admin</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-list id="colore" style="margin-top: 1rem;" lines="full">
+    <ion-button type="button" color="primary" shape="round" expand="block" [routerLink]="['/add-percorso/']">Aggiungi Percorso</ion-button>
 
+    <ion-item side="end" color="#6aa84f" lines="insert" *ngFor="let percorso of percorsi">
+      <ion-label id="colore" [routerLink]="['/info-percorso/',percorso.id]">
+        <h2>{{ percorso.nome }}</h2>
+      </ion-label>
+
+      <div class="item-note">
+        <ion-icon name="create-outline" style="zoom: 2.0;" [routerLink]="['/edit-percorso/',percorso.id]"></ion-icon>
+        <ion-icon name="trash-outline" style="zoom: 2.0;" (click)="deletePercorso(percorso.id)"></ion-icon>
+      </div>
+    </ion-item>
+  </ion-list>
 </ion-content>
