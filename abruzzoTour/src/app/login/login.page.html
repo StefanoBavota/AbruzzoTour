@@ -25,6 +25,7 @@
       <ion-input type="password" [(ngModel)]="password"></ion-input>
     </ion-item>
     <ion-button style="--background:#3f632f" type="button" (click)="login()" shape="round" expand="block">Login</ion-button>
+    <ion-route-redirect from="/login" to="/home"></ion-route-redirect>
     <div style="text-align: center;">
       <p>Non hai un account? Registrati <a [routerLink]="['/register']">Qui!</a></p>
     </div>

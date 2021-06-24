@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Recensione personale</ion-title>
+    <ion-title>Recensione</ion-title>
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
@@ -11,14 +11,20 @@
 </ion-header>
 
 <ion-content>
-  <ion-item>
-    <ion-label position="floating">Titolo</ion-label>
-    <ion-input [(ngModel)]="titolo" type="text"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label position="floating">Descrizione</ion-label>
-    <ion-textarea [(ngModel)]="descrizione" type="text" rows="5" cols="20"></ion-textarea>
-  </ion-item>
-  <ion-button type="button" (click)="editRecensione()" color="primary" shape="round" expand="block"
-    [routerLink]="['/recensioni',id_utente]">Modifica</ion-button>
+  <ion-list id="colore" style="margin-top: 1rem;">
+    <div id="header">
+      <img src="{{ image }}">
+    </div>
+
+    <ion-item color="#6aa84f">
+      <ion-label position="floating">Titolo</ion-label>
+      <ion-input [(ngModel)]="titolo" type="text"></ion-input>
+    </ion-item>
+    <ion-item color="#6aa84f">
+      <ion-label position="floating">Descrizione</ion-label>
+      <ion-textarea [(ngModel)]="descrizione" type="text" rows="5" cols="20"></ion-textarea>
+    </ion-item>
+    <ion-button style="--background:#3f632f" type="button" (click)="editRecensione()" shape="round" expand="block"
+      [routerLink]="['/recensioni',id_utente]">Modifica</ion-button>
+  </ion-list>
 </ion-content>

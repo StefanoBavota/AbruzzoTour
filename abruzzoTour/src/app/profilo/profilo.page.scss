@@ -22,9 +22,9 @@ ion-content {
 
 ion-button {
     --background: #6aa84f;
-    margin-top: 15px;
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-top: 35px;
+    margin-left: 15px;
+    margin-right: 15px;
     text-transform: initial;
     border-radius: 20px;
     box-shadow: 1px 8px 8px 0px rgba(0,0,0,0.05);
@@ -42,4 +42,11 @@ ion-title {
   width: 100%;
   height: 100%;
   text-align: center;
+}
+
+#position {
+    position: fixed;
+    left: 80px;
+    bottom: 15px;
+    right: 80px;
 }

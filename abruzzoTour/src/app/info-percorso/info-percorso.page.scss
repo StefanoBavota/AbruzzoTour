@@ -31,6 +31,7 @@ ion-content {
 //centrare titolo
 ion-button {
 	z-index: 100;
+  margin-bottom: 5px;
 }
 
 ion-title {
@@ -46,4 +47,11 @@ ion-title {
   text-align: left;
 }
 
+.Aligner {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-items: center;
+}
 

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AlertController } from '@ionic/angular';
+import { AlertController, LoadingController } from '@ionic/angular';
 import { PercorsoService } from '../api/percorso.service';
 
 @Component({
@@ -17,7 +17,8 @@ export class ListaPercorsiPage implements OnInit {
 
   constructor(
     private alertController: AlertController,
-    public _percorsoService: PercorsoService
+    public _percorsoService: PercorsoService,
+    private loadingCtrl: LoadingController,
   ) {
     this.getAllPercorsi();
   }
@@ -29,9 +30,13 @@ export class ListaPercorsiPage implements OnInit {
     }
   }
 
-  getAllPercorsi() {
+  async getAllPercorsi() {
+    const loading = await this.loadingCtrl.create({ message: 'Caricamento...' });
+    await loading.present();
+
     this._percorsoService.getAllPercorsi().subscribe((res: any) => {
       this.percorsi = res;
+      loading.dismiss();
     }, (error: any) => {
       console.log("ERROR ===", error);
     })
@@ -43,7 +48,6 @@ export class ListaPercorsiPage implements OnInit {
     }
 
     this._percorsoService.addToPreferiti(id, data).subscribe(async (res: any) => {
-      console.log("SUCCESS", res);
       const alert = await this.alertController.create({ message: 'Percorso aggiunto alla lista dei preferiti', buttons: ['OK'] });
       await alert.present();
     }, async (err: any) => {

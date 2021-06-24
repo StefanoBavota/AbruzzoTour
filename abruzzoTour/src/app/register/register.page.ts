@@ -31,7 +31,6 @@ export class RegisterPage implements OnInit {
       }
 
       this._apiService.register(data).subscribe((res: any) => {
-        console.log("SUCCESS ===", res);
         this.router.navigateByUrl('/login');
       }, (error: any) => {
         console.log("ERROR ===", error);

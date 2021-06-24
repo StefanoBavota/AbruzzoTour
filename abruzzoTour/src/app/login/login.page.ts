@@ -29,9 +29,8 @@ export class LoginPage implements OnInit {
     this._apiService.login(data).subscribe((res: any) => {
       localStorage.setItem("login", JSON.stringify(res));
       this.isLogged = !!localStorage.getItem('login');
-      //this.router.navigateByUrl('/home');
-      window.location.href = '/home';
-      //console.log("RETRIEVE ===", localStorage.getItem('login'));      
+      //this.router.navigateByUrl('/home'); no refresh
+      window.location.href = '/home';   
     }, (error: any) => {
       console.log("ERROR ===", error);
       alert('ERROR');

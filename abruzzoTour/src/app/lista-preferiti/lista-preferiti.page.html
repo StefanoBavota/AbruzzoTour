@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Lista preferiti</ion-title>
+    <ion-title>Lista Preferiti</ion-title>
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
@@ -11,31 +11,26 @@
 </ion-header>
 
 <ion-content>
-  <ion-list id="colore" style="margin-top: 1rem;" lines="full">
+  <ion-list id="colore" style="margin-top: 1rem;">
     <ion-item side="end" color="#6aa84f" lines="insert" *ngFor="let preferito of preferiti">
+
+      <ion-thumbnail class="ion-margin-end">
+        <img src="{{ preferito.image }}">
+      </ion-thumbnail>
+
       <ion-label id="colore" [routerLink]="['/info-percorso/',preferito.id_percorso]">
-        <h2>{{ preferito.nome }}</h2>
+        <p>{{ preferito.nome }}</p>
       </ion-label>
 
       <div class="item-note">
-        <ion-icon name="trash-outline" style="zoom: 2.0;" (click)="deletePreferito(preferito.id_preferiti)"></ion-icon>
+        <ion-icon name="trash-outline" style="zoom: 1.5;" (click)="deletePreferito(preferito.id_preferiti)"></ion-icon>
       </div>
+
     </ion-item>
+    <!-- se la lista è vuota -->
+    <ion-button id="position" size="default" style="--background:#6aa84f" *ngIf="preferiti <= 0" shape="round" (click)="logout()">
+      <ion-icon slot= "start" name="log-out-outline"></ion-icon>
+      Visualizza Percorsi
+    </ion-button>
   </ion-list>
 </ion-content>
-
-<!--
-
-<ion-list id="colore" style="margin-top: 1rem;" lines="full">
-    <ion-item side="end" color="#6aa84f" lines="insert" *ngFor="let preferito of preferiti">
-      <ion-label id="colore" [routerLink]="['/info-percorso/',preferito.id_percorso]">
-        <h2>{{ preferito.nome }}</h2>
-      </ion-label>
-
-      <div class="item-note">
-        <ion-icon name="trash-outline" style="zoom: 2.0;" (click)="deletePreferito(preferito.id_preferiti)"></ion-icon>
-      </div>
-    </ion-item>
-  </ion-list>
-
--->

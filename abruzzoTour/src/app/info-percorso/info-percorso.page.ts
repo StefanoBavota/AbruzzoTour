@@ -31,7 +31,6 @@ export class InfoPercorsoPage implements OnInit {
   ) {
     this.route.params.subscribe((param: any) => {
       this.id = param.id;
-      console.log(this.id);
       this.getPercorsoById(this.id);
       this.getRecensioniByPercorso(this.id)
     })
