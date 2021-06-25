@@ -28,6 +28,11 @@
         <ion-icon name="heart-outline" style="zoom: 1.5;" (click)="addToPreferiti(percorso.id)"></ion-icon>
       </div>
     </ion-item>
+
+    <!-- se la lista è vuota -->
+    <!-- <ion-button *ngIf="percorsi <= 0" style="--background:#6aa84f" type="button"  shape="round" [routerLink]="['/add-percorso/']" expand="block">
+      Aggiungi Percorsi
+    </ion-button> -->
   </ion-list>
 </ion-content>
 

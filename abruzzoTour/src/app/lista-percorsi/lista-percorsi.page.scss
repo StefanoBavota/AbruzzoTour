@@ -2,9 +2,18 @@ ion-toolbar {
   --background: #3f632f;
 }
 
+ion-content {
+    --offset-bottom: auto !important;
+    --overflow: hidden;
+    overflow: auto;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
 //colore background
 ion-content {
-  --background: #97f071;
+  background-color: #97f071;
 }
 
 #colore {
