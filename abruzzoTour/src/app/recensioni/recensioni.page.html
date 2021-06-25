@@ -26,5 +26,10 @@
         <ion-icon name="trash-outline" style="zoom: 2.0;" (click)="deleteRecensione(recensione.id)"></ion-icon>
       </div>
     </ion-item>
+
+    <!-- se la lista è vuota -->
+    <ion-button *ngIf="recensioni <= 0" style="--background:#6aa84f" [routerLink]="['/lista-percorsi']" type="button" shape="round" expand="block">
+      Visualizza Percorsi
+    </ion-button>
   </ion-list>
 </ion-content>

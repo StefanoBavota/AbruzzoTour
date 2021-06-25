@@ -11,19 +11,40 @@
 </ion-header>
 
 <ion-content>
-  <p>
-    L'App presenta un lista di percorsi i quali possono essere comodamente aggiunti ad una personale lista dei preferiti.
-    Una volta selezionato il percorso si avrà a disposizione la possibilità di poter visualizzare sulla mappa la posizione 
-    del percorso in modo tale da raggiungerlo con facilità.
-    In fine sarà possibile vedere o lasciare delle recensioni per quel particolare percorso in modo tale da tenere gli altri
-    utenti sempre aggiornati.
-  </p>
-  <p>--------------</p>
-  <p>
-    AbruzzoTour nasce dalla necessità di voler condividere la nostra passione nei confronti dell'escursionismo in Abruzzo.
-    Siamo tre studenti dell'università dell'Aquila con la passione per la montagna, abbiam oscelto di realizzare quest'app 
-    per cercare di coinvolgere qualsiasi persona di qualsiasi età in questa passione per i percorsi Abruzzesi.
-  </p>
-  <p>--------------</p>
-  <h3>Logout</h3>
+  <ion-list id="colore" style="margin-top: 1rem;">
+    <div id="header">
+      <img src="../../assets/icon/logoimg.jpg">
+    </div>
+    <ion-label>
+      <p class="testo">
+        AbruzzoTour è un'applicazione che presenta una lista di percorsi che possono essere comodamente aggiunti ad una personale lista dei preferiti.
+        Una volta selezionato un percorso si avrà a disposizione la possibilità di poterlo visualizzare sulla mappa in modo tale da raggiungerlo con facilità.
+        Infine sarà possibile vedere o lasciare delle recensioni dei vari percorsi in modo tale da tenere gli altri utenti sempre aggiornati.
+      </p>
+    </ion-label>
+  </ion-list>
+
+  <ion-list id="colore" style="margin-top: 1rem;">
+    <div id="header">
+      <img src="../../assets/icon/logoimg.jpg"><!--IMMAGINE PROVVISORIA-->
+    </div>
+  <!--SCROLL IMMAGINI DA MODIFICARE
+    <ion-slides [options]="{ slidesPerView: 'auto', zoom: false, grabCursor: true }">
+      <ion-slide *ngFor="let recensione of recensioni">
+        <ion-card id="card-text-left">
+          <ion-card-content class="testo">{{ recensione.descrizione }}</ion-card-content>
+        </ion-card>
+      </ion-slide>
+    </ion-slides>
+  -->
+    <ion-label>
+      <p class="testo">
+      AbruzzoTour nasce dalla volontà di voler condividere la nostra passione per l'escursionismo in Abruzzo.
+      Siamo tre studenti dell'università dell'Aquila con la passione per la montagna, abbiamo scelto di realizzare quest'app 
+      per cercare di coinvolgere ed aiutare qualsiasi persona interessata a questa passione.
+      </p>
+    </ion-label>
+  </ion-list>
+
+  <h3></h3>
 </ion-content>

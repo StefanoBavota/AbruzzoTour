@@ -1,8 +1,84 @@
+//elimina la barra laterale per lo scroll
+ion-content {
+  --offset-bottom: auto !important;
+  --overflow: hidden;
+  overflow: auto;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+//colore toolbar
+ion-toolbar {
+  --background: #3f632f;
+}
+
+//colore card
+ion-card {
+  --background: #6aa84f;
+}
+
+ion-content {
+  background-color: #97F071 !important;
+
+  #header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 5%;
+  }
+
+  img {
+      width: 125px;
+      height: 125px;
+      border-radius: 50%;
+      
+  }
+
+  #colore {
+      margin-top: 15%;
+      padding-left: 30px;
+      padding-right: 30px;
+  }
+}
+
+//colore titolo
+.testo {
+  margin-top: 10px;
+  color: white;
+}
+
+#colore{
+  background-color: #6aa84f;
+}
+
+ion-img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  
+}
+
+ion-list {
+  margin-top: 35px;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-transform: initial;
+  border-radius: 20px;
+  box-shadow: 1px 8px 8px 0px rgba(0,0,0,0.05);
+  --box-shadow: none;
+}
+
+ion-item {
+  margin-bottom: 5px;
+}
 
 //centrare titolo
 ion-button {
 	z-index: 100;
+  margin-bottom: 5px;
 }
+
 ion-title {
   position: absolute;
   top: 0;
@@ -11,3 +87,12 @@ ion-title {
   height: 100%;
   text-align: center;
 }
+
+.Aligner {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-items: center;
+}
+

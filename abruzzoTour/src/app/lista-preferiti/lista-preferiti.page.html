@@ -28,7 +28,7 @@
 
     </ion-item>
     <!-- se la lista è vuota -->
-    <ion-button id="position" size="default" style="--background:#6aa84f" *ngIf="preferiti <= 0" shape="round" (click)="logout()">
+    <ion-button *ngIf="preferiti <= 0" style="--background:#6aa84f" [routerLink]="['/lista-percorsi']" type="button" shape="round" expand="block">
       <ion-icon slot= "start" name="log-out-outline"></ion-icon>
       Visualizza Percorsi
     </ion-button>

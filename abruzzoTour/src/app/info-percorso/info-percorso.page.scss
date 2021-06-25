@@ -8,6 +8,15 @@ ion-content {
   }
 }
 
+.text-center {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-items: center;
+}
+
+
 //colore toolbar
 ion-toolbar {
   --background: #3f632f;
