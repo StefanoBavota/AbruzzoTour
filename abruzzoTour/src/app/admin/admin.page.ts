@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { AlertController } from '@ionic/angular';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { AlertController, IonSearchbar } from '@ionic/angular';
 import { PercorsoService } from '../api/percorso.service';
 
 @Component({
@@ -8,6 +8,8 @@ import { PercorsoService } from '../api/percorso.service';
   styleUrls: ['./admin.page.scss'],
 })
 export class AdminPage implements OnInit {
+  @ViewChild('search', { static: false }) search: IonSearchbar;
+  
   percorsi: any = [];
 
   constructor(
@@ -37,4 +39,23 @@ export class AdminPage implements OnInit {
       console.log("ERROR", err);
     })
   }
+
+  //inizio ricerca
+  ionViewDidEnter() {
+    setTimeout(() => {
+      this.search.setFocus();
+    });
+  }
+
+  _ionChange(event) {
+    this.percorsi = JSON.parse(localStorage.getItem('percorsi'));
+
+    const val = event.target.value;
+    if (val && val.trim() != '') {
+      this.percorsi = this.percorsi.filter((item: any) => {
+        return (item.nome.toLowerCase().indexOf(val.toLowerCase()) > -1);
+      })
+    }
+  }
+  // fine ricerca
 }

@@ -8,6 +8,16 @@ ion-content {
   }
 }
 
+#search-bar-color {
+  --background: #6aa84f;
+  color: white !important;
+}
+
+.sc-ion-searchbar-md-h {
+  --placeholder-opacity: 1 !important;
+  --icon-color: white !important;
+}
+
 ion-toolbar {
   --background: #3f632f;
 }
