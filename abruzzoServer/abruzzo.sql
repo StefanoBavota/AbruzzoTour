@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Giu 24, 2021 alle 11:12
+-- Creato il: Giu 25, 2021 alle 12:05
 -- Versione del server: 10.4.18-MariaDB
 -- Versione PHP: 7.3.27
 
@@ -41,9 +41,19 @@ CREATE TABLE `percorsi` (
 --
 
 INSERT INTO `percorsi` (`id`, `nome`, `info`, `image`, `latitude`, `longitude`) VALUES
-(8, 'Cascata di San Giovanni', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac elementum magna. Pellentesque mi libero, pharetra sit amet elit dictum, egestas suscipit metus. Donec vulputate posuere tortor, sed dignissim enim sagittis consectetur. Proin consectetur, libero et cursus dignissim, velit eros auctor purus, posuere tempor arcu orci nec velit. Vestibulum eget lorem eget urna ullamcorper maximus vitae sed tortor.', 'https://www.parcomajella.it/foto/grandi/cascata-san-giovanni-3.jpg', 42.16529611416041, 14.151688792061758),
-(14, 'Valle dell orfento', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac elementum magna. Pellentesque mi libero, pharetra sit amet elit dictum, egestas suscipit metus. Donec vulputate posuere tortor, sed dignissim enim sagittis consectetur. Proin consectetur, libero et cursus dignissim, velit eros auctor purus, posuere tempor arcu orci nec velit. Vestibulum eget lorem eget urna ullamcorper maximus vitae sed tortor.', 'https://www.parcomajella.it/foto/grandi/scalelle_6-2-2-3-1-1-1-1-3-1-2-1-1-2-1-1-2-1-2-1.jpg', 42.1603453945707, 14.010251469318495),
-(15, 'Lago San Domenico', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac elementum magna. Pellentesque mi libero, pharetra sit amet elit dictum, egestas suscipit metus. Donec vulputate posuere tortor, sed dignissim enim sagittis consectetur. Proin consectetur, libero et cursus dignissim, velit eros auctor purus, posuere tempor arcu orci nec velit. Vestibulum eget lorem eget urna ullamcorper maximus vitae sed tortor.', 'https://www.visitareabruzzo.it/wp-content/uploads/2020/07/lago-di-san-domenico.jpg', 41.942852564580406, 13.829321429242826);
+(8, 'Cascata di San Giovanni', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel velit vitae lacus dignissim ultrices. Interdum et malesuada fames ac ante ipsum primis in faucibus.', 'https://www.parcomajella.it/foto/grandi/cascata-san-giovanni-3.jpg', 42.16529611416041, 14.151688792061758),
+(14, 'Valle dell orfento', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel velit vitae lacus dignissim ultrices. Interdum et malesuada fames ac ante ipsum primis in faucibus.', 'https://www.parcomajella.it/foto/grandi/scalelle_6-2-2-3-1-1-1-1-3-1-2-1-1-2-1-1-2-1-2-1.jpg', 42.1603453945707, 14.010251469318495),
+(15, 'Lago San Domenico', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel velit vitae lacus dignissim ultrices. Interdum et malesuada fames ac ante ipsum primis in faucibus.', 'https://www.visitareabruzzo.it/wp-content/uploads/2020/07/lago-di-san-domenico.jpg', 41.942852564580406, 13.829321429242826),
+(27, 'Grotta Cavaliera', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel velit vitae lacus dignissim ultrices. Interdum et malesuada fames ac ante ipsum primis in faucibus.', 'https://s1.wklcdn.com/image_46/1389176/13139021/8101072Master.jpg', 42.15897462148801, 14.178026776703765),
+(28, 'Eremo di Aan Bartolomeo', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel velit vitae lacus dignissim ultrices. Interdum et malesuada fames ac ante ipsum primis in faucibus.', 'https://abruzzoturismo.it/sites/default/files/2018-02/Eremo%20di%20San%20Bartolomeo_Roccamorice.jpg', 42.18259962143855, 14.038796923296236),
+(29, 'Gole dell Alento', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel velit vitae lacus dignissim ultrices. Interdum et malesuada fames ac ante ipsum primis in faucibus.', 'http://majexperience.it/wp-content/uploads/2020/03/gole-fiume-alento-serramonacesca.jpg', 42.23366501349698, 14.101685769318497),
+(30, 'Gole di Celano', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel velit vitae lacus dignissim ultrices. Interdum et malesuada fames ac ante ipsum primis in faucibus.', 'https://bussola.s3.eu-west-1.amazonaws.com/385781/percorso-delle-gole-di-aielli-celano.jpg', 42.08600220961506, 13.567899638636987),
+(31, 'Monte Blockhaus', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel velit vitae lacus dignissim ultrices. Interdum et malesuada fames ac ante ipsum primis in faucibus.', 'https://www.yesabruzzo.com/wp-content/uploads/2017/04/cime-della-Maiella-4.jpg', 42.16087254946252, 14.132687686418368),
+(32, 'Monte Camicia', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel velit vitae lacus dignissim ultrices. Interdum et malesuada fames ac ante ipsum primis in faucibus.', 'http://abruzzomountainswild.com/wp/wp-content/uploads/2017/06/MONTE-CAMICIA-LE-BALCONATE.jpg', 42.42470005000752, 13.743021901766113),
+(33, 'Gole del Salinello', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel velit vitae lacus dignissim ultrices. Interdum et malesuada fames ac ante ipsum primis in faucibus.', 'https://www.abruzzocamping.it/imm/parchieborghi/5_viedellacqua_pentolone_oneday-resize.jpg', 42.751699877125056, 13.62212558465925),
+(34, 'Sorgenti del Pescara', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel velit vitae lacus dignissim ultrices. Interdum et malesuada fames ac ante ipsum primis in faucibus.', 'https://vitaminaproject.com/wp-content/uploads/sorgenti-del-pescara.jpg', 42.16182160781324, 13.822815153977741),
+(35, 'Rocca Calascio', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel velit vitae lacus dignissim ultrices. Interdum et malesuada fames ac ante ipsum primis in faucibus.', 'https://www.tesoridabruzzo.com/wp-content/uploads/2018/07/apertura-1.jpg', 42.32996897069803, 13.68903326136301),
+(36, 'Grotte di Stiffe', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel velit vitae lacus dignissim ultrices. Interdum et malesuada fames ac ante ipsum primis in faucibus.', 'https://www.grottestiffe.it/wp-content/uploads/cabecera.jpg', 42.25494822826573, 13.541076269318493);
 
 -- --------------------------------------------------------
 
@@ -56,32 +66,6 @@ CREATE TABLE `preferiti` (
   `id_percorso` int(11) NOT NULL,
   `id_utente` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dump dei dati per la tabella `preferiti`
---
-
-INSERT INTO `preferiti` (`id_preferiti`, `id_percorso`, `id_utente`) VALUES
-(58, 8, 3),
-(59, 14, 3);
-
--- --------------------------------------------------------
-
---
--- Struttura della tabella `prova`
---
-
-CREATE TABLE `prova` (
-  `id` int(11) NOT NULL,
-  `image` blob NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dump dei dati per la tabella `prova`
---
-
-INSERT INTO `prova` (`id`, `image`) VALUES
-(15, 0x433a66616b6570617468496d6d6167696e656565652e706e67);
 
 -- --------------------------------------------------------
 
@@ -102,8 +86,9 @@ CREATE TABLE `recensioni` (
 --
 
 INSERT INTO `recensioni` (`id`, `titolo`, `descrizione`, `id_utente`, `id_percorso`) VALUES
-(1, 'Divertente', 'Lorem ipsum dolore sit amne', 3, 8),
-(6, 'bello', 'sdfgagagafgadgghjfghj', 3, 14);
+(6, 'bello', 'sdfgagagafgadgghjfghj', 3, 14),
+(7, 'Recensione2', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id cursus lacus, non aliquam ex. In sed leo mauris. Quisque varius tincidunt libero in lacinia.', 3, 8),
+(8, 'Recensione 3', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id cursus lacus, non aliquam ex. In sed leo mauris. Quisque varius tincidunt libero in lacinia.', 3, 8);
 
 -- --------------------------------------------------------
 
@@ -148,12 +133,6 @@ ALTER TABLE `preferiti`
   ADD KEY `id_percorso` (`id_percorso`);
 
 --
--- Indici per le tabelle `prova`
---
-ALTER TABLE `prova`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indici per le tabelle `recensioni`
 --
 ALTER TABLE `recensioni`
@@ -176,25 +155,19 @@ ALTER TABLE `utenti`
 -- AUTO_INCREMENT per la tabella `percorsi`
 --
 ALTER TABLE `percorsi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
 -- AUTO_INCREMENT per la tabella `preferiti`
 --
 ALTER TABLE `preferiti`
-  MODIFY `id_preferiti` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
-
---
--- AUTO_INCREMENT per la tabella `prova`
---
-ALTER TABLE `prova`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id_preferiti` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
 
 --
 -- AUTO_INCREMENT per la tabella `recensioni`
 --
 ALTER TABLE `recensioni`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT per la tabella `utenti`

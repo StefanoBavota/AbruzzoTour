@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { AlertController, LoadingController } from '@ionic/angular';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { AlertController, IonSearchbar, LoadingController } from '@ionic/angular';
 import { PercorsoService } from '../api/percorso.service';
 
 @Component({
@@ -9,11 +9,14 @@ import { PercorsoService } from '../api/percorso.service';
 })
 export class ListaPercorsiPage implements OnInit {
 
+  @ViewChild('search', { static: false }) search: IonSearchbar;
+
   percorsi: any = [];
   isLogged: boolean;
   userInfo: any;
   id_utente: any;
   image: any;
+  searchedItem: any = [];
 
   constructor(
     private alertController: AlertController,
@@ -30,12 +33,32 @@ export class ListaPercorsiPage implements OnInit {
     }
   }
 
+  //inizio ricerca
+  ionViewDidEnter() {
+    setTimeout(() => {
+      this.search.setFocus();
+    });
+  }
+
+  _ionChange(event) {
+    this.percorsi = JSON.parse(localStorage.getItem('percorsi'));
+
+    const val = event.target.value;
+    if (val && val.trim() != '') {
+      this.percorsi = this.percorsi.filter((item: any) => {
+        return (item.nome.toLowerCase().indexOf(val.toLowerCase()) > -1);
+      })
+    }
+  }
+  // fine ricerca
+
   async getAllPercorsi() {
     const loading = await this.loadingCtrl.create({ message: 'Caricamento...' });
     await loading.present();
 
     this._percorsoService.getAllPercorsi().subscribe((res: any) => {
       this.percorsi = res;
+      localStorage.setItem("percorsi", JSON.stringify(res));
       loading.dismiss();
     }, (error: any) => {
       console.log("ERROR ===", error);

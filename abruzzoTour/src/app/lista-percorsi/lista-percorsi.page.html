@@ -8,22 +8,31 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
   </ion-toolbar>
+  <ion-toolbar id="colore">
+    <ion-searchbar #search debounce="250" (ionInput)="_ionChange($event)" id="search-bar-color"></ion-searchbar>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-list id="colore" style="margin-top: 1rem;" >
+  <ion-list id="colore" style="margin-top: 1rem;">
     <ion-item side="end" color="#6aa84f" lines="insert" *ngFor="let percorso of percorsi">
-      
       <ion-thumbnail class="ion-margin-end">
         <ion-img [routerLink]="['/info-percorso/',percorso.id]" src="{{ percorso.image }}"></ion-img>
       </ion-thumbnail>
 
-      <ion-label id="colore" [routerLink]="['/info-percorso/',percorso.id]"><p>{{ percorso.nome }}</p></ion-label>
-      
+      <ion-label id="colore" [routerLink]="['/info-percorso/',percorso.id]">
+        <p>{{ percorso.nome }}</p>
+      </ion-label>
+
       <div class="item-note" *ngIf="isLogged">
         <ion-icon name="heart-outline" style="zoom: 1.5;" (click)="addToPreferiti(percorso.id)"></ion-icon>
       </div>
     </ion-item>
+
+    <!-- se la lista è vuota -->
+    <!-- <ion-button *ngIf="percorsi <= 0" style="--background:#6aa84f" type="button"  shape="round" [routerLink]="['/add-percorso/']" expand="block">
+      Aggiungi Percorsi
+    </ion-button> -->
   </ion-list>
 </ion-content>
 

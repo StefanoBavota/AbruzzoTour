@@ -21,8 +21,8 @@
     <div class="Aligner">
       <ion-button style="--background:#3f632f" size="default" shape="round" [routerLink]="['/view-map',id,latitude,longitude]" class="center">
         <ion-icon slot="icon-only" name="map-sharp"></ion-icon>
-        Map
-        </ion-button>
+        <div class="text-center">Mappa</div>
+      </ion-button>
     </div>
   </ion-card>
 
@@ -41,7 +41,7 @@
   <ion-row *ngIf="isLogged">
     <ion-col class="ion-text-center">
       <ion-button style="--background:#3f632f" shape="round" [routerLink]="['/add-recensioni',id]" class="center">
-        Recensione
+        Commenta
       </ion-button>
     </ion-col>
   </ion-row>
