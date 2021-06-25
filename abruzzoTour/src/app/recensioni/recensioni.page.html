@@ -28,8 +28,10 @@
     </ion-item>
 
     <!-- se la lista è vuota -->
-    <ion-button *ngIf="recensioni <= 0" style="--background:#6aa84f" [routerLink]="['/lista-percorsi']" type="button" shape="round" expand="block">
-      Visualizza Percorsi
-    </ion-button>
+    <div class="Aligner">
+      <ion-button *ngIf="recensioni <= 0" style="--background:#3f632f" size="default" [routerLink]="['/lista-percorsi']" type="button" shape="round" class="center">
+        Visualizza Percorsi
+      </ion-button>
+    </div>
   </ion-list>
 </ion-content>

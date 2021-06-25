@@ -72,3 +72,14 @@ ion-title {
   height: 100%;
   text-align: center;
 }
+
+ion-card {
+  background-color:#4e793b;
+  margin-top: 18px;
+  margin-left: -10px;
+  margin-right: -10px;
+  text-transform: initial;
+  border-radius: 20px;
+  box-shadow: 1px 8px 8px 0px rgba(0,0,0,0.05);
+  --box-shadow: none;
+}

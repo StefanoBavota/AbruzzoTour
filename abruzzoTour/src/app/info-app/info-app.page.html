@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Impostazioni</ion-title>
+    <ion-title>Info</ion-title>
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
@@ -26,16 +26,13 @@
     </ion-label>
   </ion-list>
 
+  <ion-slides [options]="{ slidesPerView: 'auto', zoom: false, grabCursor: true }">
+    <ion-slide>
+      <img src="../../assets/icon/logoimg.jpg">    
+    </ion-slide>
+  </ion-slides>
+
   <ion-list id="colore" style="margin-top: 1rem;">
-  <!--SCROLL IMMAGINI DA MODIFICARE
-    <ion-slides [options]="{ slidesPerView: 'auto', zoom: false, grabCursor: true }">
-      <ion-slide *ngFor="let recensione of recensioni">
-        <ion-card id="card-text-left">
-          <ion-card-content class="testo">{{ recensione.descrizione }}</ion-card-content>
-        </ion-card>
-      </ion-slide>
-    </ion-slides>
-  -->
     <ion-label>
       <h1>Chi siamo:</h1>
       <p class="testo">
@@ -48,3 +45,13 @@
 
   <h3></h3>
 </ion-content>
+
+<!--SCROLL IMMAGINI DA MODIFICARE
+    <ion-slides [options]="{ slidesPerView: 'auto', zoom: false, grabCursor: true }">
+      <ion-slide *ngFor="let recensione of recensioni">
+        <ion-card id="card-text-left">
+          <ion-card-content class="testo">{{ recensione.descrizione }}</ion-card-content>
+        </ion-card>
+      </ion-slide>
+    </ion-slides>
+  -->

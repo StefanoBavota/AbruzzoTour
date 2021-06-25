@@ -4,7 +4,15 @@ ion-toolbar {
 }
 
 ion-content {
-  --background: #97F071 !important;
+  --offset-bottom: auto !important;
+  --overflow: hidden;
+  overflow: auto;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+ion-content {
+  background-color: #97F071 !important;
 
   #header {
       display: flex;
@@ -26,8 +34,8 @@ ion-content {
       padding-right: 30px;
 
       ion-button {
-          margin-top: 35px;
-          height: 48px;
+          margin-top: 20px;
+          height: 40px;
           font-size: 18px;
           text-transform: initial;
           border-radius: 50px;

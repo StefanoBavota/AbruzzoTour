@@ -52,13 +52,6 @@ ion-content {
   background-color: #6aa84f;
 }
 
-ion-img {
-  width: 55px;
-  height: 55px;
-  border-radius: 50%;
-  
-}
-
 ion-list {
   margin-top: 35px;
   margin-left: 10px;
@@ -94,5 +87,9 @@ ion-title {
   width: 100%;
   align-items: center;
   justify-items: center;
+}
+
+ion-slides {
+  margin-top: 15px;
 }
 
