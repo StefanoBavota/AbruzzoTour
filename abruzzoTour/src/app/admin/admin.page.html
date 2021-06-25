@@ -8,6 +8,9 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
   </ion-toolbar>
+  <ion-toolbar id="colore">
+    <ion-searchbar #search debounce="250" (ionInput)="_ionChange($event)" id="search-bar-color"></ion-searchbar>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content>

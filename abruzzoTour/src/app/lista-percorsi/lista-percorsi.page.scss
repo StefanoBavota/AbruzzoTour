@@ -3,13 +3,13 @@ ion-toolbar {
 }
 
 ion-content {
-    --offset-bottom: auto !important;
-    --overflow: hidden;
-    overflow: auto;
-    &::-webkit-scrollbar {
-      display: none;
-    }
+  --offset-bottom: auto !important;
+  --overflow: hidden;
+  overflow: auto;
+  &::-webkit-scrollbar {
+    display: none;
   }
+}
 
 //colore background
 ion-content {
@@ -25,9 +25,9 @@ ion-content {
   color: white !important;
 }
 
-.sc-ion-searchbar-md-h{
-    --placeholder-opacity: 1 !important;
-    --icon-color: white !important;
+.sc-ion-searchbar-md-h {
+  --placeholder-opacity: 1 !important;
+  --icon-color: white !important;
 }
 
 ion-img {
