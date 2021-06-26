@@ -20,7 +20,9 @@ ion-content {
     margin-top: 85px;
 }
 
+//centrare titolo
 ion-button {
+    z-index: 100;
     --background: #6aa84f;
     margin-top: 35px;
     margin-left: 15px;
@@ -31,10 +33,6 @@ ion-button {
     --box-shadow: none;
 }
 
-//centrare titolo
-ion-button {
-	z-index: 100;
-}
 ion-title {
   position: absolute;
   top: 0;
@@ -46,7 +44,7 @@ ion-title {
 
 #position {
     position: fixed;
-    left: 80px;
+    left: 60px;
     bottom: 15px;
-    right: 80px;
+    right: 60px;
 }

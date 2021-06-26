@@ -25,12 +25,13 @@
       <div class="item-note">
         <ion-icon name="trash-outline" style="zoom: 1.5;" (click)="deletePreferito(preferito.id_preferiti)"></ion-icon>
       </div>
-
     </ion-item>
-    <!-- se la lista è vuota -->
-    <ion-button *ngIf="preferiti <= 0" style="--background:#6aa84f" [routerLink]="['/lista-percorsi']" type="button" shape="round" expand="block">
-      <ion-icon slot= "start" name="log-out-outline"></ion-icon>
-      Visualizza Percorsi
-    </ion-button>
+
+    <div class="Aligner">
+      <!-- se la lista è vuota -->
+      <ion-button *ngIf="preferiti <= 0" style="--background:#3f632f" size="default" [routerLink]="['/lista-percorsi']" type="button" shape="round" class="center">
+        Visualizza Percorsi
+      </ion-button>
+    </div>
   </ion-list>
 </ion-content>
