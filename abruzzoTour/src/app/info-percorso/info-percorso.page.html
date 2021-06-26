@@ -30,7 +30,7 @@
     <ion-slide *ngFor="let recensione of recensioni">
       <ion-card id="card-text-left">
         <ion-card-header>
-          <ion-card-subtitle class="testo">{{ nomeUtente }}</ion-card-subtitle>
+          <ion-card-subtitle class="testo">{{ recensione.nome }}</ion-card-subtitle>
           <ion-card-title class="testo">{{ recensione.titolo }}</ion-card-title>
         </ion-card-header>
         <ion-card-content class="testo">{{ recensione.descrizione }}</ion-card-content>
