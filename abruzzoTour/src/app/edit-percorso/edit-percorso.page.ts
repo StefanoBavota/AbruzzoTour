@@ -57,7 +57,8 @@ export class EditPercorsoPage implements OnInit {
     }
 
     this._percorsoService.editPercorso(this.id, data).subscribe(async (res: any) => {
-      window.location.href = '/admin';
+      //window.location.href = '/admin';
+      this.router.navigateByUrl('/admin');
       const alert = await this.alertController.create({ message: 'Percorso modificato', buttons: ['OK'] });
       await alert.present();
     }, (err: any) => {

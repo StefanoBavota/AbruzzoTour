@@ -35,7 +35,8 @@ export class AddPercorsoPage implements OnInit {
       }
   
       this._percorsoService.createPercorso(data).subscribe((res: any) => {
-        window.location.href = '/admin';
+        //window.location.href = '/admin';
+        this.router.navigateByUrl('/admin');
       }, (error: any) => {
         console.log("ERROR ===", error);
       })

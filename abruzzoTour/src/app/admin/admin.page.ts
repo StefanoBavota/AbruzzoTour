@@ -10,7 +10,7 @@ import { PercorsoService } from '../api/percorso.service';
 export class AdminPage implements OnInit {
   @ViewChild('search', { static: false }) search: IonSearchbar;
   
-  percorsi: any = [];
+  percorsi: any[];
 
   constructor(
     private alertController: AlertController,
@@ -25,6 +25,7 @@ export class AdminPage implements OnInit {
   getAllPercorsi() {
     this._percorsoService.getAllPercorsi().subscribe((res: any) => {
       this.percorsi = res;
+      localStorage.setItem("percorsi", JSON.stringify(res));
     }, (error: any) => {
       console.log("ERROR ===", error);
     })
@@ -58,4 +59,12 @@ export class AdminPage implements OnInit {
     }
   }
   // fine ricerca
+
+  refreshPage(e) {
+    this.getAllPercorsi();
+    setTimeout(() => {
+      console.log('Async operation has ended');
+      e.target.complete();
+    }, 1000);
+  }
 }

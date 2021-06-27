@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Giu 25, 2021 alle 12:05
+-- Creato il: Giu 27, 2021 alle 10:32
 -- Versione del server: 10.4.18-MariaDB
 -- Versione PHP: 7.3.27
 
@@ -86,9 +86,10 @@ CREATE TABLE `recensioni` (
 --
 
 INSERT INTO `recensioni` (`id`, `titolo`, `descrizione`, `id_utente`, `id_percorso`) VALUES
-(6, 'bello', 'sdfgagagafgadgghjfghj', 3, 14),
-(7, 'Recensione2', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id cursus lacus, non aliquam ex. In sed leo mauris. Quisque varius tincidunt libero in lacinia.', 3, 8),
-(8, 'Recensione 3', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id cursus lacus, non aliquam ex. In sed leo mauris. Quisque varius tincidunt libero in lacinia.', 3, 8);
+(6, 'Recensione 1', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id cursus lacus, non aliquam ex. In sed leo mauris. Quisque varius tincidunt libero in lacinia.', 3, 14),
+(7, 'Recensione 2', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id cursus lacus, non aliquam ex. In sed leo mauris. Quisque varius tincidunt libero in lacinia.', 3, 8),
+(8, 'Recensione 3', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id cursus lacus, non aliquam ex. In sed leo mauris. Quisque varius tincidunt libero in lacinia.', 3, 8),
+(11, 'Recensione 4', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id cursus lacus, non aliquam ex. In sed leo mauris. Quisque varius tincidunt libero in lacinia.', 10, 8);
 
 -- --------------------------------------------------------
 
@@ -155,25 +156,25 @@ ALTER TABLE `utenti`
 -- AUTO_INCREMENT per la tabella `percorsi`
 --
 ALTER TABLE `percorsi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
 -- AUTO_INCREMENT per la tabella `preferiti`
 --
 ALTER TABLE `preferiti`
-  MODIFY `id_preferiti` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
+  MODIFY `id_preferiti` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=70;
 
 --
 -- AUTO_INCREMENT per la tabella `recensioni`
 --
 ALTER TABLE `recensioni`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT per la tabella `utenti`
 --
 ALTER TABLE `utenti`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- Limiti per le tabelle scaricate
