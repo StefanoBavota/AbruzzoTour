@@ -34,7 +34,9 @@ export class AddPercorsoPage implements OnInit {
         longitude: this.longitude,
       }
   
-      this._percorsoService.createPercorso(data).subscribe((res: any) => {
+      this._percorsoService.createPercorso(data).subscribe(async(res: any) => {
+        const alert = await this.alertController.create({ message: 'Percorso creato scorri verso il basso per aggiornare', buttons: ['OK'] });
+        await alert.present();
         //window.location.href = '/admin';
         this.router.navigateByUrl('/admin');
       }, (error: any) => {

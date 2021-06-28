@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { AlertController, IonSearchbar } from '@ionic/angular';
+import { AlertController, IonSearchbar, LoadingController } from '@ionic/angular';
 import { PercorsoService } from '../api/percorso.service';
 
 @Component({
@@ -14,7 +14,8 @@ export class AdminPage implements OnInit {
 
   constructor(
     private alertController: AlertController,
-    public _percorsoService: PercorsoService
+    public _percorsoService: PercorsoService,
+    private loadingCtrl: LoadingController,
   ) {
     this.getAllPercorsi();
   }
@@ -22,10 +23,14 @@ export class AdminPage implements OnInit {
   ngOnInit() {
   }
 
-  getAllPercorsi() {
+  async getAllPercorsi() {
+    const loading = await this.loadingCtrl.create({ message: 'Caricamento...' });
+    await loading.present();
+
     this._percorsoService.getAllPercorsi().subscribe((res: any) => {
       this.percorsi = res;
       localStorage.setItem("percorsi", JSON.stringify(res));
+      loading.dismiss();
     }, (error: any) => {
       console.log("ERROR ===", error);
     })

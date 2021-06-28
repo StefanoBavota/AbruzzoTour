@@ -59,7 +59,7 @@ export class EditPercorsoPage implements OnInit {
     this._percorsoService.editPercorso(this.id, data).subscribe(async (res: any) => {
       //window.location.href = '/admin';
       this.router.navigateByUrl('/admin');
-      const alert = await this.alertController.create({ message: 'Percorso modificato', buttons: ['OK'] });
+      const alert = await this.alertController.create({ message: 'Percorso modificato scorri verso il basso per aggiornare', buttons: ['OK'] });
       await alert.present();
     }, (err: any) => {
       console.log("ERROR", err);
